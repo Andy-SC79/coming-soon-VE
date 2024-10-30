@@ -4,7 +4,7 @@
 
 layout: default
 permalink: /
-title: {{ site.title | page.title }}
+title: "{{ site.title}} | {{ page.title }}"
 ---
 <html lang="es">
 
@@ -46,6 +46,7 @@ title: {{ site.title | page.title }}
                         <a href="https://www.facebook.com/VitalEnergyShop/" class="social-link"><i class="mdi mdi-facebook-box"></i></a>
                         <a href="https://www.instagram.com/vitalenergy.shop/" class="social-link"><i class="mdi mdi-instagram"></i></a>
                         <a href="https://wa.me/573332653017?text=Hola!%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20uno%20de%20sus%20productos" class="social-link"><i class="mdi mdi-whatsapp"></i></a>
+                        <a href="../colageno-magnesio-extractos-magicos" class="social-link"><i class="mdi mdi-linkedin"></i></a>
                     </nav>
                 </div>
             </main>

@@ -1,0 +1,195 @@
+<!-- Form -->
+  <div class="min-h-screen bg-gray-100 p-0 sm:p-12">
+    <div class="mx-auto max-w-md px-6 py-12 bg-white border-0 shadow-lg sm:rounded-3xl">
+      <h1 class="text-2xl font-bold mb-2">Datos de Envío</h1>
+      <h2 class="text-lead text-gris text-bold text-sm mb-8">Colágeno Hidrolizado con Citrato de Magnesio, Extractos Mágicos x 180gr.</h2>
+      <form id="form" novalidate action="/submit" method="post">
+        <div class="relative z-0 w-full mb-5">
+          <input
+            type="text"
+            name="name"
+            placeholder=" "
+            required
+            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+          />
+          <label for="name" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Nombres y apellidos completos<sup  class=text-azul>*</sup></label>
+          <span class="text-sm text-red-600 hidden" id="error">Este campo es obligatorio</span>
+        </div>
+
+        <div class="relative z-0 w-full mb-5">
+          <input
+            type="text"
+            name="phone_number"
+            placeholder=" "
+            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+          />
+          <label for="number" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Número telefónico de WhatsApp<sup class="text-azul">*</sup></label>
+          <span class="text-sm text-red-600 hidden" id="error">Este campo es obligatorio</span>
+        </div>
+  
+        <div class="relative z-0 w-full mb-5">
+          <input
+            type="email"
+            name="email"
+            placeholder=" "
+            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+          />
+          <label for="email" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Correo electrónico válido<sup class=text-azul>*</sup></label>
+          <span class="text-sm text-red-600 hidden" id="error">Este campo es obligatorio</span>
+        </div>
+
+        <div class="relative z-0 w-full mb-5">
+          <input
+            type="address"
+            name="dirección"
+            placeholder=" "
+            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+          />
+          <label for="email" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Dirección de envío<sup class="text-azul">*</sup></label>
+          <span class="text-sm text-red-600 hidden" id="error">Este campo es obligatorio</span>
+        </div>
+
+        <div class="relative z-0 w-full mb-5">
+          <input
+            type="text"
+            name="ciudad"
+            placeholder=" "
+            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+          />
+          <label for="email" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Ciudad y Departamento<sup class=text-azul>*</sup></label>
+          <span class="text-sm text-red-600 hidden" id="error">Este campo es obligatorio</span>
+        </div>
+  
+        <!--div class="relative z-0 w-full mb-5">
+          <input
+            type="password"
+            name="password"
+            placeholder=" "
+            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+          />
+          <label for="password" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Enter password</label>
+          <span class="text-sm text-red-600 hidden" id="error">Password is required</span>
+        </div-->
+  
+        <fieldset class="relative z-0 w-full p-px mb-5">
+          <legend class="absolute text-gray-500 transform scale-75 -top-3 origin-0">Selecciona tu oferta</legend>
+          <div class="block pt-3 pb-2 space-x-4">
+            <label>
+              <input
+                type="radio"
+                name="radio"
+                value="77000"
+                class="mr-2 text-black border-2 border-gray-300 focus:border-gray-300 focus:ring-black"
+              />
+              Pago Con Tarjeta
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="radio"
+                value="115000"
+                class="mr-2 text-black border-2 border-gray-300 focus:border-gray-300 focus:ring-black"
+              />
+              Pago Contraentrega
+            </label>
+          </div>
+          <span class="text-sm text-red-600 hidden" id="error">Option has to be selected</span>
+        </fieldset>
+  
+        <div class="relative z-0 w-full mb-5">
+          <select
+            name="select"
+            value=""
+            onclick="this.setAttribute('value', this.value);"
+            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none z-1 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+          >
+            <option value="" selected disabled hidden></option>
+            <option value="77000">1 und x $77.000</option>
+            <option value="115000">2 und x $115.000</option>
+            <option value="154000">3 und x $154.000</option>
+            <option value="195000">4 und x $195.000</option>
+            <option value="231000">5 und x $231.000</option>
+          </select>
+          <label for="select" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Selecciona una oferta</label>
+          <span class="text-sm text-red-600 hidden" id="error">Debes seleccionar una opción</span>
+        </div>
+  
+        <div class="flex flex-row space-x-4 hidden">
+          <div class="relative z-0 w-full mb-5">
+            <input
+              type="hidden"
+              name="dataField"
+              id="dateField"
+              placeholder=" "
+              onclick="this.setAttribute('type', 'date');"
+              class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+            />
+            <label for="date" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500 hidden">Fecha</label>
+            <span class="text-sm text-red-600 hidden" id="error">Date is required</span>
+          </div>
+          <div class="relative z-0 w-full">
+            <input
+              type="text"
+              name="time"
+              placeholder="{{% today %}} "
+              onclick="this.setAttribute('type', 'time');"
+              class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+            />
+            <label for="time" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500 hidden">Time</label>
+            <span class="text-sm text-red-600 hidden" id="error">Time is required</span>
+          </div>
+        </div>
+  
+        <div class="relative z-0 w-full mb-5">
+          <input
+            type="number"
+            name="money"
+            placeholder=" "
+            class="pt-3 pb-2 pl-5 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+          />
+          <div class="absolute top-0 left-0 mt-3 ml-1 text-gray-400">Total a Pagar $</div>
+          <label for="money" class="absolute duration-300 top-3 left-5 -z-1 origin-0 text-gray-500"> </label>
+          <span class="text-sm text-red-600 hidden" id="error">Error</span>
+        </div>
+  
+        <div class="relative z-0 w-full mb-5 hidden">
+          <input
+            type="text"
+            name="duration"
+            placeholder=" "
+            class="pt-3 pb-2 pr-12 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+          />
+          <div class="absolute top-0 right-0 mt-3 mr-4 text-gray-400">min</div>
+          <label for="duration" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Duration</label>
+          <span class="text-sm text-red-600 hidden" id="error">Duration is required</span>
+        </div>
+  
+        <button
+          id="button"
+          type="submit"
+          class="w-full px-6 py-3 mt-3 text-lg text-white bg-azul rounded hover:bg-verde transition-all duration-150 ease-linear rounded-lg shadow outline-none bg-blue hover:via-violet hover:shadow-lg focus:outline-none"
+        >
+          Confirmar Pedido
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+  // Select the form
+  const form = document.getElementById("myForm");
+  
+  // Listen for form submission
+  form.addEventListener("submit", function() {
+    // Get current date
+    const now = new Date();
+    
+    // Format the date as yyyy-mm-dd (ISO format)
+    const formattedDate = now.toISOString().split("T")[0];
+    
+    // Set the value of the dateField
+    document.getElementById("dateField").value = formattedDate;
+  });
+});
+  </script>
