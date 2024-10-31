@@ -1,16 +1,18 @@
 body {
-  font-family: 'Karla', sans-serif;
-  background-color:#b0b0b0 ;
+  font-family: 'Karla', 'Oswald', 'Nunito', sans-serif;
+  background-color: #b0b0b0; /*var(--gris)*/
   background-size: cover;
-  color: #f2f5ff;
+  color: #f2f5ff; /*var(--plata);*/
+  height: 100vh;
+  /*display: grid;*/
+  place-items: center;
   }
-
   /*# sourceMappingURL=bd-coming-soon.css.map */
 .slider {
   position: relative; /* Fijado en la parte superior de la pantalla */
   top: 1;
   width: 100%;
-  background-color: #f2f5ff; /*Fondo para destacar el texto */
+  background-color: var(--plata); /*Fondo para destacar el texto */
   color: #4b4747; /*Texto oscuro */
   padding: 1px 0;
   overflow: hidden; /* Oculta el texto que sale del contenedor */
@@ -41,33 +43,7 @@ body {
       transform-origin: 0%;
     }
   
-    input:focus ~ label,
-    input:not(:placeholder-shown) ~ label,
-    textarea:focus ~ label,
-    textarea:not(:placeholder-shown) ~ label,
-    select:focus ~ label,
-    select:not([value='']):valid ~ label {
-      /* @apply transform; scale-75; -translate-y-6; */
-      --tw-translate-x: 0;
-      --tw-translate-y: 0;
-      --tw-rotate: 0;
-      --tw-skew-x: 0;
-      --tw-skew-y: 0;
-      transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate))
-        skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-      --tw-scale-x: 0.75;
-      --tw-scale-y: 0.75;
-      --tw-translate-y: -1.5rem;
-    }
-  
-    input:focus ~ label,
-    select:focus ~ label {
-      /* @apply text-black; left-0; */
-      --tw-text-opacity: 1;
-      color: rgba(0, 0, 0, var(--tw-text-opacity));
-      left: 0px;
-    }
-
+    
     /* Cards */
 
     @import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
@@ -75,19 +51,14 @@ body {
   box-sizing: border-box;
   margin: 0;
 }
-body{
-  height: 100vh;
-  display: grid;
-  place-items: center;
-  font-family: 'Oswald', sans-serif;
-}
-h2{font-size:2rem}
 
-/* Vanilla CSS for flip card */
+h2{font-size:6rem}
+
+/* Vanilla CSS for flip card 
 .card { perspective: 800px;}
 .card__content {transform-style: preserve-3d;}
 .card:hover .card__content {transform: rotateY(.5turn);}
 
 .card__front,
 .card__back { backface-visibility: hidden;}
-.card__back{ transform: rotateY(.5turn);}
+.card__back{ transform: rotateY(.5turn);}*/
