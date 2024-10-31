@@ -54,6 +54,21 @@ body {
 
 h2{font-size:6rem}
 
+li {
+  font-size: 1rem;
+  color: #555;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+li::before {
+  content: '✔';
+  color: #ad28ff; /*  var(--lila) */
+  position: absolute;
+  left: 0;
+}
+
 /* Vanilla CSS for flip card 
 .card { perspective: 800px;}
 .card__content {transform-style: preserve-3d;}

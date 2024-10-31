@@ -1,4 +1,4 @@
-@import 'assets/css/output.css';
+@import '/assets/css/output.css';
 @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
 :root {
   --d: 700ms;
@@ -285,3 +285,5 @@ body {
 }
 
 /*# sourceMappingURL=styles.css.map */
+
+
