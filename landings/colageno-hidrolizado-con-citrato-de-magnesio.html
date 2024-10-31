@@ -2,21 +2,16 @@
 layout: landing
 title: Extractos Mágicos - Colágeno Hidrolizado con Citrato de Magnesio
 permalink: colageno-magnesio-extractos-magicos
+wp-link-dudas: https://wa.me/573332653017?text=¡Hola, *Vital Energy*! Estuve en su pagina web y quisiera más información sobre el producto%20
+wp-link-lo-quiero: https://wa.me/573332653017?text=¡Hola, *Vital Energy*! Estoy interesado en el producto%20
 ---
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
 
-</head>
 <body class="bg-white text-azul pt-2">
 
   <!-- Slider -->
   <div class="slider">
     <div class="slider__text text-lila font-bold">
-        ENVÍO GRATIS EN TODA COLOMBIA | PAGO CONTRAENTREGA <span class="text-plata">Dios te bendiga siempre</span>VITAL ENERGY SHOP | DISFRUTA LO QUE TE MERECES
+        <span class="text-white">Dios te bendiga siempre, que el señor guarde tu entrada y tu salida</span>ENVÍO GRATIS EN TODA COLOMBIA | PAGO CONTRAENTREGA <span class="text-white">Dios te bendiga siempre, que el señor guarde tu entrada y tu salida</span>VITAL ENERGY SHOP | DISFRUTA LO QUE TE MERECES
     </div>
 </div>
 
@@ -30,8 +25,11 @@ permalink: colageno-magnesio-extractos-magicos
                 Descubre el poder del colágeno hidrolizado con citrato de magnesio: piel firme, articulaciones saludables, y energía para cada día, todo en un solo producto.
             </h3>
             <div class="mt-10 flex flex-col sm:flex-row justify-center md:justify-start">
-                <button class="w-full sm:w-40 px-4 py-3 rounded font-semibold text-md bg-azul text-white border-2 border-azul hover:bg-lila hover:border-lila hover:text-white hover:font-bold">Píde el tuyo ahora</button>
-                <button class="w-full mt-4 sm:mt-0 sm:ml-4 sm:w-40 px-4 py-3 rounded font-semibold text-md bg-white text-azul border-2 border-gray-500 hover:bg-verde hover:border-verde hover:text-white hover:font-bold">Chatea con nosotros</button>
+                
+                <a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }}.%20Mi%20nombre%20es%20..."><button class="w-full sm:w-40 px-4 py-3 rounded font-semibold text-md bg-azul text-white border-2 border-azul hover:bg-lila hover:border-lila hover:text-white hover:font-bold">Píde el tuyo ahora</button>
+                
+                <a target="_blank" href="{{ page.wp-link-dudas }}{{ page.title }}.%20Mi%20nombre%20es%20..."><button class="w-full mt-4 sm:mt-0 sm:ml-4 sm:w-40 px-4 py-3 rounded font-semibold text-md bg-white text-azul border-2 border-gray-500 hover:bg-verde hover:border-verde hover:text-white hover:font-bold">Chatea con nosotros</button>
+                </a>
             </div>
         </div>
         <div class="w-full rounded-xl shadow-md overflow-hidden md:w-1/2 flex justify-center md:justify-end">
@@ -63,7 +61,7 @@ permalink: colageno-magnesio-extractos-magicos
                 <div class="card">
                   <h2 class="title top-right">{{ card.title }}</h2>
                   <p class="copy text-center">{{ card.copy }}</p>
-                  <button class="btn"><a href="#form" class="">Lo Quiero</a></button>
+                  <button class="btn"><a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }}.%20Mi%20nombre%20es%20...">Lo Quiero</a></button>
                 </div>
               {% endfor %}
             <!--/div-->
@@ -120,6 +118,7 @@ permalink: colageno-magnesio-extractos-magicos
     // },
     // ...
 </script>
+
 <!-- Services Section -->
 <section id="services" class="py-16 bg-white">
     <div class="container mx-auto px-5">
@@ -128,22 +127,22 @@ permalink: colageno-magnesio-extractos-magicos
         <div class="bg-blue-50 p-6 rounded-lg shadow-lg w-80">
           <h4 class="text-gray-600 text-center">Lleva 1 unidad por solo</h4>
           <p class="text-xl font-semibold mb-2 text-center">$77.000</p>
-          <img src="..\assets\images\oferta-1.png" alt="{{ page.title }} Oferta 1">
+          <a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }}.%20Mi%20nombre%20es%20..."><img src="..\assets\images\oferta-1.png" alt="{{ page.title }} Oferta 1"></a>
         </div>
         <div class="bg-blue-50 p-6 rounded-lg shadow-lg w-80">
             <h4 class="text-gray-600 text-center">Lleva 2 unidades + obsequio </h4>
             <p class="text-xl font-semibold mb-2 text-center">$115.000</p>
-            <img src="..\assets\images\oferta-2.png" alt="{{ page.title }} Oferta 2">
+            <a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }}.%20Mi%20nombre%20es%20..."><img src="..\assets\images\oferta-2.png" alt="{{ page.title }} Oferta 2"></a>
           </div>
           <div class="bg-blue-50 p-6 rounded-lg shadow-lg w-80">
             <h4 class="text-gray-600 text-center">Paga 2 y lleva 3 + obsequio</h4>
             <p class="text-xl font-semibold mb-2 text-center">$154.000</p>
-            <img src="..\assets\images\oferta-2x3.png" alt="{{ page.title }} Oferta 2x3">
+            <a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }}.%20Mi%20nombre%20es%20..."><img src="..\assets\images\oferta-2x3.png" alt="{{ page.title }} Oferta 2x3"></a>
           </div>
           <div class="bg-blue-50 p-6 rounded-lg shadow-lg w-80">
             <h4 class="text-gray-600 text-center">Paga 3 y lleva 5 + obsequio</h4>
             <p class="text-xl font-semibold mb-2 text-center">$231.000</p>
-            <img src="..\assets\images\oferta-3x5.png" alt="{{ page.title }} Oferta 3x5">
+            <a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }}.%20Mi%20nombre%20es%20..."><img src="..\assets\images\oferta-3x5.png" alt="{{ page.title }} Oferta 3x5"></a>
           </div>
       </div>
     </div>
@@ -151,17 +150,16 @@ permalink: colageno-magnesio-extractos-magicos
 
   <!-- WP Buttom -->
   <div class="max-w-screen-xl mx-auto px-5 bg-white min-h-screen">
-    <a target="_blank" href="https://wa.me/573332653017?text=%C2%A1Hola,%20*Vital%20Energy*!%20Estuve%20en%20su%20pagina%20web%20y%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20col%C3%A1geno%20hidrolizado%20con%20citrato%20de%20magnesio.%20Mi%20nombre%20es%20..." class="flex w-70 gap-4 px-4 py-2 bg-[rgb(32,176,85)] rounded-lg shadow-xl self-center items-center justify-around hover:bg-[rgb(34,192,92)]/90" 
+    <a target="_blank" href="{{ page.wp-link-dudas }}{{ page.title }}.%20Mi%20nombre%20es%20..." class="flex w-70 gap-4 px-4 py-2 bg-[rgb(32,176,85)] rounded-lg shadow-xl self-center items-center justify-around hover:bg-[rgb(34,192,92)]/90" 
     href=""><img alt="logo whatsapp" loading="lazy" width="70" height="70" decoding="async" data-nimg="1" src="..\assets\images\whatsapp-3d.png" style="color: transparent;"><p class="text-center content-center text-2xl text-white">
         ¿Aún tienes dudas? ¡Escríbenos!
     </p></a>
 </div>
 
-  {% include templates/form.html %}
   <!-- Footer -->
-  <footer class="bg-azul text-white py-4">
+  <footer class="bg-gris text-white py-4">
     <div class="container w-full mx-auto text-center">
-      <p>&copy; {{ site.title }} 2024. Todos los derechos reservados.</p><sub><a href="https://www.freepik.es/foto-gratis/vista-frontal-mujer-mayor-practicando-yoga-playa_10296196.htm#fromView=image_search_similar&page=1&position=15&uuid=a23409c5-09c6-45c2-ae14-e3c180303052">Imagen de freepik</a></sub>
+      <p>&copy; {{ site.title }} 2024. Todos los derechos reservados.</p><sub><a href="https://www.freepik.es/foto-gratis/vista-frontal-mujer-mayor-practicando-yoga-playa_10296196.htm#fromView=image_search_similar&page=1&position=15&uuid=a23409c5-09c6-45c2-ae14-e3c180303052">Imágenes de freepik</a></sub>
     </div>
   </footer>
 </body>
