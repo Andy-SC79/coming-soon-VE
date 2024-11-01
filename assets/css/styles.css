@@ -22,30 +22,57 @@ body {
 
 .text-shadow{
   text-shadow: 1px 1px 2px #b0b0b0, 2px 2px 2px black;
-
 }
 
 .page-content {
-  display: flex;
+  display: block;
   max-width: 100%;
   justify-content: center;
   margin: 0 auto;
   overflow: hidden;
-  flex-wrap: wrap;
+  /*flex-wrap: nowrap;*/
   gap: 1rem;
   padding: 1rem;
   font-family: var(--font-sans);
 }
-@media (min-width: 600px) {
+
+@media (min-width: 200px) {
   .page-content {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .card {
+    width:100%;
+    height: auto;
+    border-radius: 8px;
+    font-size-adjust: from-font;
+    text-align: left;
+  }
+  .title {
+    font-size: 0.8rem;
   }
 }
+
+
+@media (min-width: 600px) {
+  .page-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .card {
+    height: 250px;
+    border-radius: 8px;
+  }
+}
+
 @media (min-width: 800px) {
   .page-content {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+@media (hover: hover) and (min-width: 600px) {
+  .card:after {
+    transform: translateY(0);
+  }
 
 .slider-container {
     position: relative;
@@ -54,40 +81,36 @@ body {
 
 .slider {
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 0.5rem;
     transition: transform 0.5s ease;
 }
 
 
 .card {
   flex: 1 1 100%;
-  min-width: 300px;
-  max-width: 300px;
-  min-height: 200;
+  min-width: 240px;
+  max-width: 240px;
+  min-height: 320px;
+  max-height: 320px;
   position: relative;
   align-items: flex-end;
   overflow: hidden;
-  padding: 20px;
+  padding: 1rem;
   margin: 1rem;
-  width: 100%;
+  /*width: 100%;*/
   text-align: right;
   color: white;
   background-color: whitesmoke;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
   transition: transform 1s ease;
-  transform-origin: center center;
+  transform-origin: center;
 }
 
 .card .active {
     transform: scale(1.1); /* Efecto lupa */
 }
 
-@media (min-width: 600px) {
-  .card {
-    height: 420px;
-    border-radius: 8px;
-  }
-}
 .card:before {
   content: "";
   position: absolute;
@@ -128,44 +151,44 @@ body {
 }
 
 .card:nth-child(1):before {
-  background-image: url(https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-image: url('/assets/images/piel-joven.jpg');
 }
 .card:nth-child(2):before {
-  background-image: url(https://images.unsplash.com/photo-1533903345306-15d1c30952de?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-image: url('/assets/images/articulaciones fuertes.jpg');
 }
 .card:nth-child(3):before {
-  background-image: url(https://images.unsplash.com/photo-1545243424-0ce743321e11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-image: url('/assets/images/cabello-abundante.jpg');
 }
 .card:nth-child(4):before {
-  background-image: url(https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-image: url('/assets/images/flexibilidad-articular.jpg');
 }
 .card:nth-child(5):before {
-  background-image: url(https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-image: url('/assets/images/unas-resistentes.jpg');
 }
 .card:nth-child(6):before {
-  background-image: url(https://images.unsplash.com/photo-1533903345306-15d1c30952de?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-image: url('/assets/images/reparacion-tejidos.jpg');
 }
 .card:nth-child(7):before {
-  background-image: url(https://images.unsplash.com/photo-1545243424-0ce743321e11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-image: url('/assets/images/salud-intestinal.jpg');
 }
 .card:nth-child(8):before {
-  background-image: url(https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-image: url('/assets/images/corazon-sano.jpg');
 }
 .card:nth-child(9):before {
-  background-image: url(https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-image: url('/assets/images/menos-fatiga.jpg');
 }
 .card:nth-child(10):before {
-  background-image: url(https://images.unsplash.com/photo-1533903345306-15d1c30952de?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-image: url('/assets/images/sueno-reparador.jpg');
 }
 .card:nth-child(11):before {
-  background-image: url(https://images.unsplash.com/photo-1545243424-0ce743321e11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-image: url('/assets/images/mente-lucida.jpg');
 }
 .card:nth-child(12):before {
-  background-image: url(https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-image: url('/assets/images/recuperacion-muscular.jpg');
 }
 
-.card:hover p {
-  display: block;
+.card:hover .copy {
+  display: inline-block;
   z-index: 2000;
   color: white;
   position: absolute;
@@ -174,45 +197,28 @@ body {
   bottom: 3rem;
   right: 1rem;
 }
-.card:hover button {
+
+.card:hover .btn {
   background-color: #ad28ff;
 }
-.content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding: 1rem;
-  transition: transform var(--d) var(--e);
-  z-index: 1;
-}
-.content > * + * {
-  margin-top: 1rem;
-}
 
-.title p{
+  .copy {
+  font-family: var(--font-comic-sans);
+  font-size: 1.2rem;
+  font-style: italic;
+  line-height: 1.2;
+  display: block;
   font-size: 1.0rem;
   font-weight: bold;
   text-color: white;
   line-height: 1.2;
   padding-right: 0.1rem;
   z-index: 1;
-  display: unset;
-  position: relative;
-  z-index: 2000;
-  text-align: center;
-}
-
-
-.copy {
-  font-family: var(--font-comic-sans);
-  font-size: 1.2rem;
-  font-style: italic;
-  line-height: 1.0;
   display: none;
- 
+  position: absolute;
+  text-align: justify-all;
 }
+
 
 .btn {
   cursor: pointer;
@@ -226,7 +232,7 @@ body {
   background-color: #69d6cc;
   border: none;
   border-radius: 10px;
-  z-index: -10;
+  z-index: 1;
   width: 7rem;
   height: 2.5rem;
   align-items: left;
@@ -243,10 +249,20 @@ body {
   outline-offset: 3px;
 }
 
-@media (hover: hover) and (min-width: 600px) {
-  .card:after {
-    transform: translateY(0);
-  }
+  .content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  transition: transform var(--d) var(--e);
+  z-index: 1;
+}
+  .content > * + * {
+  margin-top: 1rem;
+}
+
   .content {
     transform: translateY(calc(100% - 4.5rem));
   }
@@ -257,7 +273,7 @@ body {
   }
   .card:hover,
   .card:focus-within {
-    align-items: left;
+    align-items: center;
   }
   .card:hover:before,
   .card:focus-within:before {
