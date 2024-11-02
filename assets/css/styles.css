@@ -302,4 +302,58 @@ body {
 
 /*# sourceMappingURL=styles.css.map */
 
+/* Estilos de la sección de testimonios */
+.testimonial-section {
+  padding: 2rem 1rem;
+  background-color: var(--plata, #f2f5ff); /* Usa tu color de fondo corporativo */
+}
+
+.testimonial-title {
+  font-size: 1.5rem;
+  color: var(--verde, #69d6cc); /* Color del título */
+}
+
+.testimonial-swiper {
+  width: 100%;
+  overflow: hidden;
+  max-width: auto;
+  margin: auto;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.testimonial-image {
+  width: 70%;
+/*  aspect-ratio: 16 / 9;*/
+  height: auto;
+  max-height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+./* Estilos personalizados para los controles de Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--verde, #69d6cc); /* Color de los botones de navegación */
+  transition: color 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: var(--azul, #76bcf5); /* Cambia de color en hover */
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--gris, #b0b0b0); /* Color de la paginación */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--lila, #ad28ff); /* Color activo de la paginación */
+}
 

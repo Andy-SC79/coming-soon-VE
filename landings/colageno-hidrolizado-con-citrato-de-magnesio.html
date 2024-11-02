@@ -8,12 +8,12 @@ wp-link-lo-quiero: https://wa.me/573332653017?text=¡Hola, *Vital Energy*! Estoy
 
 <body class="bg-white text-azul pt-2">
 
-  <!-- Slider -->
-  <div class="rotating-banner">
+  <!-- Top Rotating Banner -->
+  <section class="rotating-banner">
     <div class="slider__text text-lila font-bold">
-        <span class="text-white">Dios te bendiga siempre, que el Señor guarde tu entrada y tu salida</span>ENVÍO GRATIS EN TODA COLOMBIA | PAGO CONTRAENTREGA <span class="text-white">Dios te bendiga siempre, que el señor guarde tu entrada y tu salida</span>VITAL ENERGY SHOP | DISFRUTA LO QUE TE MERECES
+        <span class="text-white">Dios te bendiga siempre, que el Señor guarde tu entrada y tu salida</span>ENVÍO GRATIS EN TODA COLOMBIA &nbsp;&nbsp;|&nbsp;&nbsp; PAGO CONTRAENTREGA<span class="text-white">* * * Dios te bendiga siempre, que el señor guarde tu entrada y tu salida * * *</span>VITAL ENERGY SHOP &nbsp;&nbsp;|&nbsp;&nbsp;  DISFRUTA LO QUE TE MERECES
     </div>
-</div>
+  </section>
 
 <!--Hero section-->
 
@@ -26,7 +26,7 @@ wp-link-lo-quiero: https://wa.me/573332653017?text=¡Hola, *Vital Energy*! Estoy
             </h3>
             <div class="mt-10 flex flex-col sm:flex-row justify-center md:justify-start">
                 
-                <a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }}.%20Mi%20nombre%20es%20..."><button class="w-full sm:w-40 px-4 py-3 rounded font-semibold text-md bg-azul text-white border-2 border-azul hover:bg-lila hover:border-lila hover:text-white hover:font-bold">Píde el tuyo ahora</button>
+                <a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }}.%20Mi%20nombre%20es%20..."><button class="w-full sm:w-40 px-4 py-3 rounded font-semibold text-md bg-azul text-white border-2 border-azul hover:bg-lila hover:border-lila hover:text-white hover:font-bold">Empieza tu transformación</button>
                 
                 <a target="_blank" href="{{ page.wp-link-dudas }}{{ page.title }}.%20Mi%20nombre%20es%20..."><button class="w-full mt-4 sm:mt-0 sm:ml-4 sm:w-40 px-4 py-3 rounded font-semibold text-md bg-white text-azul border-2 border-gray-500 hover:bg-verde hover:border-verde hover:text-white hover:font-bold">Chatea con nosotros</button>
                 </a>
@@ -82,8 +82,8 @@ wp-link-lo-quiero: https://wa.me/573332653017?text=¡Hola, *Vital Energy*! Estoy
     
     <!-- Detalles del producto -->
     <div class="lg:w-1/2 text-left lg:text-left space-y-4 px-4">
-        <h2 class="text-2xl lg:text-3xl font-bold text-verde">Colágeno Hidrolizado con Citrato de Magnesio</h2>
-            <p class="text-gray-600 leading-relaxed">
+        <h2 class="text-2xl lg:text-3xl font-bold text-verde leading-tight">Colágeno Hidrolizado con Citrato de Magnesio</h2>
+            <p class="text-gray-600 leading-tight font-light">
             Fortalece tus articulaciones, rejuvenece tu piel y estimula el crecimiento de cabello y uñas saludables. Mejora tu digestión, apoya tu corazón y disfruta de un descanso profundo y reparador. Menos ansiedad, más energía y vitalidad: ¡siéntete increíble de adentro hacia afuera!
             </p>
             <ul class="text-gray-700 list-inside space-y-2">
@@ -104,19 +104,43 @@ wp-link-lo-quiero: https://wa.me/573332653017?text=¡Hola, *Vital Energy*! Estoy
   </div>
 </section>
 
-<!-- Testimonios -->
+<!-- Testimonios --src="/assets/images/testimonio-wp-1.jpg-->
 
-<!-- /Testimonios -->
+<section class="container testimonial-section">
+  <h2 class="testimonial-title text-center text-verde font-bold mb-6">Lo que nuestros clientes dicen</h2>
+  <div class="swiper testimonial-swiper">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <img src="/assets/images/testimonio-wp-1.jpg" alt="Testimonio 1" class="testimonial-image">
+      </div>
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <img src="/assets/images/testimonio-wp-2.jpg" alt="Testimonio 2" class="testimonial-image">
+      </div>
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <img src="/assets/images/testimonio-wp-1.jpg" alt="Testimonio 3" class="testimonial-image">
+      </div>
+      <!-- Agrega más slides según sea necesario -->
+    </div>
+    <!-- Controles de navegación -->
+    <div class="swiper-button-next text-verde"></div>
+    <div class="swiper-button-prev text-verde"></div>
+    <!-- Paginación -->
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
 
 <!-- Modo de Uso -->
-<section class="py-4 bg-verde flex flex-col items-center"> 
+<section class="container py-4 bg-verde flex flex-col items-center"> 
   <div class="flex flex-col lg:flex-row-reverse justify-center items-center p-4 gap-3 lg:gap-5">
     
     <!-- Imagen visible solo en pantallas medianas y superiores -->
     <img 
       alt="preparación colágeno" 
       src="/assets/gifs/preparacion-extractos-magicos-ezgif.com-optimize.gif"
-      class="hidden md:block w-[300px] h-[300px] object-cover"
+      class="rounded-lg hidden md:block w-[300px] h-[300px] object-cover"
     >
     
     <div class="text-gray-200 flex flex-col justify-center mx-4 p-2 lg:w-1/2">
@@ -130,10 +154,12 @@ wp-link-lo-quiero: https://wa.me/573332653017?text=¡Hola, *Vital Energy*! Estoy
       </ol>
       
       <!-- Imagen visible solo en pantallas pequeñas -->
-      <img 
+      <img
+        width='250px'
+        height='250px' 
         alt="preparación colágeno" 
         src="/assets/gifs/preparacion-extractos-magicos-ezgif.com-optimize.gif"
-        class="block md:hidden w-21 h-21 pt-4 mx-auto"
+        class="rounded-lg block md:hidden w-21 h-21 pt-4 mx-auto"
       >
     </div>
   </div>
@@ -144,7 +170,7 @@ wp-link-lo-quiero: https://wa.me/573332653017?text=¡Hola, *Vital Energy*! Estoy
 
 
 <!--FAQs Accordion-->
-<div class="max-w-screen-xl mx-auto px-5 bg-white min-h-screen">
+<section class="container max-w-screen-xl mx-auto px-5 bg-white ">
 	<div class="flex flex-col items-center">
 		<h2 class="font-bold text-5xl mt-5 tracking-tight">
 			FAQs
@@ -153,8 +179,8 @@ wp-link-lo-quiero: https://wa.me/573332653017?text=¡Hola, *Vital Energy*! Estoy
 			Preguntas Frecuentes
 		</p>
 	</div>
-	<div class="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8">
-        <div class="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8">
+	<div class="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-6">
+        <div class="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-6">
         {% for faq in site.data.faqs %}
         <div class="py-5">
             <details class="group">
@@ -172,7 +198,7 @@ wp-link-lo-quiero: https://wa.me/573332653017?text=¡Hola, *Vital Energy*! Estoy
         </div>
         {% endfor %}
 	</div>
-</div>
+</section>
 
 
 
@@ -192,34 +218,38 @@ wp-link-lo-quiero: https://wa.me/573332653017?text=¡Hola, *Vital Energy*! Estoy
     // ...
 </script>
 
-<!-- Services Section -->
-<section id="services" class="py-16 bg-white">
-    <div class="container mx-auto px-5">
-      <h3 class="text-2xl font-bold text-center mb-6">Ofertas Especiales</h3>
-      <div class="flex justify-center space-y-3 sm:space-y-0 sm:space-x-3">
-        <div class="bg-blue-50 p-6 rounded-lg shadow-lg w-80">
-          <h4 class="text-gray-600 text-center">Lleva 1 unidad por solo</h4>
-          <p class="text-xl font-semibold mb-2 text-center">$77.000</p>
-          <a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }}.%20Mi%20nombre%20es%20..."><img src="..\assets\images\oferta-1.png" alt="{{ page.title }} Oferta 1"></a>
+<!-- Offers Section -->
+<section id="offers" class="container py-16 bg-white">
+    <div class="mx-auto px-5">
+      <h2 class="font-bold text-5xl my-5 tracking-tight text-center">Ofertas Especiales</h2>
+      <div class="grid gap-3 grid-cols-2 lg:grid-cols-4">
+        <div class="bg-plata p-6 rounded-lg shadow-lg">
+          <h4 class="text-gray-600 text-center">Paga 3 y lleva 5 + obsequio</h4>
+          <p class="text-xl font-semibold mb-2 text-center">$231.000</p>
+          <a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }}.%20Mi%20nombre%20es%20..."><img class="rounded-lg" src="..\assets\images\oferta-3x5.png" alt="{{ page.title }} Oferta 3x5"></a>
         </div>
-        <div class="bg-blue-50 p-6 rounded-lg shadow-lg w-80">
-            <h4 class="text-gray-600 text-center">Lleva 2 unidades + obsequio </h4>
-            <p class="text-xl font-semibold mb-2 text-center">$115.000</p>
-            <a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }}.%20Mi%20nombre%20es%20..."><img src="..\assets\images\oferta-2.png" alt="{{ page.title }} Oferta 2"></a>
-          </div>
-          <div class="bg-blue-50 p-6 rounded-lg shadow-lg w-80">
-            <h4 class="text-gray-600 text-center">Paga 2 y lleva 3 + obsequio</h4>
-            <p class="text-xl font-semibold mb-2 text-center">$154.000</p>
-            <a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }}.%20Mi%20nombre%20es%20..."><img src="..\assets\images\oferta-2x3.png" alt="{{ page.title }} Oferta 2x3"></a>
-          </div>
-          <div class="bg-blue-50 p-6 rounded-lg shadow-lg w-80">
-            <h4 class="text-gray-600 text-center">Paga 3 y lleva 5 + obsequio</h4>
-            <p class="text-xl font-semibold mb-2 text-center">$231.000</p>
-            <a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }}.%20Mi%20nombre%20es%20..."><img src="..\assets\images\oferta-3x5.png" alt="{{ page.title }} Oferta 3x5"></a>
-          </div>
+        <div class="bg-plata p-6 rounded-lg shadow-lg">
+          <h4 class="text-gray-600 text-center">Paga 2 y lleva 3 + obsequio</h4>
+          <p class="text-2xl font-semibold mb-2 text-center">$154.000</p>
+          <a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }}.%20Mi%20nombre%20es%20..."><img class="rounded-lg" src="..\assets\images\oferta-2x3.png" alt="{{ page.title }} Oferta 2x3"></a>
+        </div>
+        <div class="bg-plata p-6 rounded-lg shadow-lg">
+          <h4 class="text-gray-600 text-center">Lleva 2 unidades + obsequio </h4>
+          <p class="text-2xl font-semibold mb-2 text-center">$115.000</p>
+          <a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }}.%20Mi%20nombre%20es%20..."><img class="rounded-lg" src="..\assets\images\oferta-2.png" alt="{{ page.title }} Oferta 2"></a>
+        </div>
+        <div class="bg-plata p-6 rounded-lg shadow-lg">
+          <h4 class="text-gray-600 text-center">Lleva 1 por</h4>
+          <p class="text-xl font-semibold mb-2 text-center">$77.000</p>
+          <a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }}.%20Mi%20nombre%20es%20..."><img class="rounded-lg" src="..\assets\images\oferta-1.png" alt="{{ page.title }} Oferta 1"></a>
+        </div>
       </div>
     </div>
   </section>
+
+  <div id="gif-unmerco" class="container text-center px-2">
+    <img src="http://pruebas.unmerco.com/wp/wp-content/uploads/2023/11/SENTIRSE-JOVEN-2.gif" alt="Mujer rejuvenecida porque toma {{ page.title }}">
+  </div>
 
   <!-- WP Buttom -->
   <div class="max-w-screen-xl mx-auto px-5 bg-white min-h-screen">

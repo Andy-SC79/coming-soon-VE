@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+
 body {
   font-family: 'Karla', 'Oswald', 'Nunito', sans-serif;
   background-color: #b0b0b0; /*var(--gris)*/
@@ -12,7 +14,7 @@ body {
   position: relative; /* Fijado en la parte superior de la pantalla */
   top: 1;
   width: 100%;
-  background-color: var(--plata); /*Fondo para destacar el texto */
+  /*background-color: #b0b0b0; var(--gris); Fondo para destacar el texto */
   color: #4b4747; /*Texto oscuro */
   padding: 1px 0;
   overflow: hidden; /* Oculta el texto que sale del contenedor */
@@ -46,7 +48,6 @@ body {
     
     /* Cards */
 
-    @import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
