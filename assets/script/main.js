@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Mover el slider
       const offset = -currentIndex * 320; // Ancho de la card más el gap
-      document.querySelector(".slider").style.transform = translateX(${offset}px);
+      document.querySelector(".slider").style.transform = `translateX(${offset}px)`;
   }
 
   // Iniciar el slider en loop

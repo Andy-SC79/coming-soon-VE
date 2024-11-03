@@ -21,7 +21,7 @@ body {
 }
 
 .text-shadow{
-  text-shadow: 1px 1px 2px #b0b0b0, 2px 2px 2px black;
+  text-shadow: 1px 1px 1px #2e1e19, 2px 2px 3px var(--gris, #b0b0b0);
 }
 
 .page-content {
@@ -30,38 +30,28 @@ body {
   justify-content: center;
   margin: 0 auto;
   overflow: hidden;
-  /*flex-wrap: nowrap;*/
   gap: 1rem;
   padding: 1rem;
   font-family: var(--font-sans);
 }
 
-@media (min-width: 200px) {
+/*@media (min-width: 200px) {
   .page-content {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-  .card {
-    width:100%;
-    height: auto;
-    border-radius: 8px;
-    font-size-adjust: from-font;
-    text-align: left;
-  }
+  }*/
+  
   .title {
     font-size: 0.8rem;
+    
   }
-}
 
 
-@media (min-width: 600px) {
+/*@media (min-width: 600px) {
   .page-content {
     grid-template-columns: repeat(4, 1fr);
-  }
-  .card {
-    height: 250px;
-    border-radius: 8px;
-  }
-}
+  }*/
+  
+
 
 @media (min-width: 800px) {
   .page-content {
@@ -73,6 +63,7 @@ body {
   .card:after {
     transform: translateY(0);
   }
+}
 
 .slider-container {
     position: relative;
@@ -86,20 +77,18 @@ body {
     transition: transform 0.5s ease;
 }
 
-
 .card {
   flex: 1 1 100%;
-  min-width: 240px;
-  max-width: 240px;
-  min-height: 320px;
-  max-height: 320px;
+  min-width: 1;
+  max-width: 600px;
+  min-height: 350px;
+  max-height: 800px;
   position: relative;
-  align-items: flex-end;
+  align-items: center;
   overflow: hidden;
   padding: 1rem;
   margin: 1rem;
-  /*width: 100%;*/
-  text-align: right;
+  /*text-align: center;*/
   color: white;
   background-color: whitesmoke;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
@@ -108,7 +97,7 @@ body {
 }
 
 .card .active {
-    transform: scale(1.1); /* Efecto lupa */
+    transform: scale(1.1); 
 }
 
 .card:before {
@@ -123,6 +112,7 @@ body {
   transition: transform calc(var(--d) * 1.5) var(--e);
   pointer-events: none;
 }
+
 .card:after {
   content: "";
   display: inline-block;
@@ -147,44 +137,17 @@ body {
   padding: 8px;
   border-bottom-left-radius: 8px;
   width:100%;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
-.card:nth-child(1):before {
-  background-image: url('/assets/images/piel-joven.jpg');
-}
-.card:nth-child(2):before {
-  background-image: url('/assets/images/articulaciones fuertes.jpg');
-}
-.card:nth-child(3):before {
-  background-image: url('/assets/images/cabello-abundante.jpg');
-}
-.card:nth-child(4):before {
-  background-image: url('/assets/images/flexibilidad-articular.jpg');
-}
-.card:nth-child(5):before {
-  background-image: url('/assets/images/unas-resistentes.jpg');
-}
-.card:nth-child(6):before {
-  background-image: url('/assets/images/reparacion-tejidos.jpg');
-}
-.card:nth-child(7):before {
-  background-image: url('/assets/images/salud-intestinal.jpg');
-}
-.card:nth-child(8):before {
-  background-image: url('/assets/images/corazon-sano.jpg');
-}
-.card:nth-child(9):before {
-  background-image: url('/assets/images/menos-fatiga.jpg');
-}
-.card:nth-child(10):before {
-  background-image: url('/assets/images/sueno-reparador.jpg');
-}
-.card:nth-child(11):before {
-  background-image: url('/assets/images/mente-lucida.jpg');
-}
-.card:nth-child(12):before {
-  background-image: url('/assets/images/recuperacion-muscular.jpg');
+@media (max-width: 600px) {
+  .top-right {
+  font-size: 1.0rem;
+  }
+  .copy {
+    font-size: 0.6rem;
+    font-weight: lighter;
+  }
 }
 
 .card:hover .copy {
@@ -204,14 +167,12 @@ body {
 
   .copy {
   font-family: var(--font-comic-sans);
-  font-size: 1.2rem;
-  font-style: italic;
-  line-height: 1.2;
-  display: block;
   font-size: 1.0rem;
+  font-style: italic;
+  display: block;
   font-weight: bold;
   text-color: white;
-  line-height: 1.2;
+  line-height: 1.1;
   padding-right: 0.1rem;
   z-index: 1;
   display: none;
@@ -298,7 +259,7 @@ body {
   .card:focus-within .content > *:not(.title) {
     transition-duration: 3s;
   }
-}
+}*/
 
 /*# sourceMappingURL=styles.css.map */
 
@@ -357,3 +318,39 @@ body {
   background-color: var(--lila, #ad28ff); /* Color activo de la paginación */
 }
 
+/*.card:nth-child(1):before {
+  background-image: url('/assets/images/piel-joven.jpg');
+}
+.card:nth-child(2):before {
+  background-image: url('/assets/images/articulaciones-fuertes.jpg');
+}
+.card:nth-child(3):before {
+  background-image: url('/assets/images/cabello-abundante.jpg');
+}
+.card:nth-child(4):before {
+  background-image: url('/assets/images/flexibilidad-articular.jpg');
+}
+.card:nth-child(5):before {
+  background-image: url('/assets/images/unas-resistentes.jpg');
+}
+.card:nth-child(6):before {
+  background-image: url('/assets/images/reparacion-tejidos.jpg');
+}
+.card:nth-child(7):before {
+  background-image: url('/assets/images/salud-intestinal.jpg');
+}
+.card:nth-child(8):before {
+  background-image: url('/assets/images/corazon-sano.jpg');
+}
+.card:nth-child(9):before {
+  background-image: url('/assets/images/menos-fatiga.jpg');
+}
+.card:nth-child(10):before {
+  background-image: url('/assets/images/sueno-reparador.jpg');
+}
+.card:nth-child(11):before {
+  background-image: url('/assets/images/mente-lucida.jpg');
+}
+.card:nth-child(12):before {
+  background-image: url('/assets/images/recuperacion-muscular.jpg');
+}*/

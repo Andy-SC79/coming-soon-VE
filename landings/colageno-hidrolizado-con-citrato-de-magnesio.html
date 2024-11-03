@@ -6,22 +6,22 @@ wp-link-dudas: https://wa.me/573332653017?text=¡Hola, *Vital Energy*! Estuve en
 wp-link-lo-quiero: https://wa.me/573332653017?text=¡Hola, *Vital Energy*! Estoy interesado en el producto%20
 ---
 
-<body class="bg-white text-azul pt-2">
+<body class="bg-plata text-azul pt-2">
 
   <!-- Top Rotating Banner -->
   <section class="rotating-banner">
     <div class="slider__text text-lila font-bold">
-        <span class="text-white">Dios te bendiga siempre, que el Señor guarde tu entrada y tu salida</span>ENVÍO GRATIS EN TODA COLOMBIA &nbsp;&nbsp;|&nbsp;&nbsp; PAGO CONTRAENTREGA<span class="text-white">* * * Dios te bendiga siempre, que el señor guarde tu entrada y tu salida * * *</span>VITAL ENERGY SHOP &nbsp;&nbsp;|&nbsp;&nbsp;  DISFRUTA LO QUE TE MERECES
+        <span class="text-plata">Dios te bendiga siempre, que el Señor guarde tu entrada y tu salida</span>ENVÍO GRATIS EN TODA COLOMBIA &nbsp;&nbsp;|&nbsp;&nbsp; PAGO CONTRAENTREGA<span class="text-plata">* * * Dios te bendiga siempre, que el señor guarde tu entrada y tu salida * * *</span>VITAL ENERGY SHOP &nbsp;&nbsp;|&nbsp;&nbsp;  DISFRUTA LO QUE TE MERECES
     </div>
   </section>
 
 <!--Hero section-->
 
-<div class="flex pt-12 px-6 md:px-20  items-center justify-center bg-hero md:h-screen overflow-hidden">
-    <div class="flex flex-col  gap-6 md:flex-row items-center max-w-8xl">
+<div class="flex pt-12 px-6 md:px-20 items-center justify-center bg-hero md:h-screen overflow-hidden">
+    <div class="flex flex-col gap-6 md:flex-row items-center max-w-8xl">
         <div class="w-full md:w-1/2 lg:pr-32">
-            <h2 class="text-4xl md:text-5xl text-center md:text-left text-verde leading-tight font-medium">Rejuvenece y fortalece tu cuerpo desde adentro.</h2>
-            <h3 class="mt-6 md:mt-10 text-md lg:text-xl text-center md:text-left text-gray-700 font-light tracking-wider leading-relaxed">
+            <h2 class="text-shadow text-4xl md:text-5xl text-center md:text-left text-verde leading-tight font-medium">Rejuvenece y fortalece tu cuerpo desde adentro.</h2>
+            <h3 class="mt-6 md:mt-10 text-lg lg:text-xl text-center md:text-left text-gray-700 font-light tracking-wider leading-relaxed">
                 Descubre el poder del colágeno hidrolizado con citrato de magnesio: piel firme, articulaciones saludables, y energía para cada día, todo en un solo producto.
             </h3>
             <div class="mt-10 flex flex-col sm:flex-row justify-center md:justify-start">
@@ -40,49 +40,68 @@ wp-link-lo-quiero: https://wa.me/573332653017?text=¡Hola, *Vital Energy*! Estoy
 
 <!--/Hero Section-->
 
+<!--Benefits Cards-->
+<section class="container bg-plata">
 
   <!--p>¡Únete a más 
                 de 5,750 clientes satisfechos!</p>
             <a href="#form" class="bg-rosado text-plata py-2 px-4 rounded hover:bg-azul transition">Empieza hoy tu transformación</a-->
-<div class="w-full space-x-2">
-    <h2 class="text-shadow text-4xl md:text-5xl text-center text-lila font-medium mt-2 pb-8 ">¿Qué ocurre en mi cuerpo <br><sub>al consumir Extractos Mágicos?<sub></h2>
-</div>
-
-{% for card in site.data.cards %}
-<p class="hidden">{{ card.title }}</p>
-{% endfor %}
-
-<!--Benefits Cards-->
-<main class="page-content">
-    <div class="slider-container">
-        <div class="slider">
-            <!--div class="flex flex items-center flex-wrap max-w-full"-->
-              {% for card in site.data.cards %}
-                <div class="card">
-                  <h2 class="title top-right">{{ card.title }}</h2>
-                  <p class="copy text-center">{{ card.copy }}</p>
-                  <button class="btn"><a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }}.%20Mi%20nombre%20es%20...">Lo Quiero</a></button>
-                </div>
-              {% endfor %}
-            <!--/div-->
-        </div>
+    <div class="w-full space-x-2">
+        <h2 class="text-shadow text-4xl md:text-5xl text-center text-lila font-medium mt-2 pb-8">¿Qué ocurre en mi cuerpo <br><sub>al consumir Extractos Mágicos?<sub></h2>
     </div>
-</main>
+
+    {% for card in site.data.cards %}
+    <p class="hidden">{{ card.title }}</p>
+    {% endfor %}
+
+
+    <main class="page-content">
+        <div class="slider-container">
+            <div class="slider grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                {% for card in site.data.cards %}
+                    <div class="card rounded overflow-hidden bg-cover" style="background-image: url('/assets/images/{{ card.src }}.jpg');">
+                      <h2 class="title top-right">{{ card.title }}</h2>
+                      <p class="copy text-center text-1x1">{{ card.copy }}</p>
+                      <button class="btn text-shadow"><a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }}.%20Mi%20nombre%20es%20...">Lo Quiero</a></button>
+                    </div>
+                  {% endfor %}
+            </div>
+        </div>
+    </main>
+</section>
 <!--/cards-->
 
+<!--main class="page-content">
+    <div class="slider-container">
+        <div class="slider grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {% for card in site.data.cards %}
+                <div class="card relative overflow-hidden bg-whitesmoke shadow-lg rounded">
+                    <div class="bg-cover bg-center aspect-w-2 aspect-h-3" style="background-image: url('/assets/images/{{ card.src }}.jpg')"></div>
+                    <div class="p-4 flex flex-col justify-between h-full">
+                        <h2 class="title absolute top-0 right-0 bg-blue-600 text-white px-2 py-1 text-lg">{{ card.title }}</h2>
+                        <p class="copy text-center">{{ card.copy }}</p>
+                        <button class="btn text-shadow bg-blue-400 hover:bg-purple-600"><a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }}.%20Mi%20nombre%20es%20...">Lo Quiero</a></button>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</main-->
+
 <!-- Detalles -->
-<section class="bg-gray-100 py-10">
+<section class="bg-oro py-10">
   <div class="container mx-auto flex flex-col lg:flex-row items-center gap-8">
     
     <!-- Imagen del producto -->
-    <div class="lg:w-1/2 flex justify-center">
-      <img src="assets/gifs/extractos-magicos.gif" alt="Producto de colágeno hidrolizado con citrato de magnesio" 
+    <div class="lg:w-1/2 flex justify-center bg-oro border-lila">
+      <img src="assets/gifs/extractos-magicos.gif" alt="colágeno hidrolizado con citrato de magnesio rotando" 
            class="w-full max-w-md rounded-lg shadow-lg">
     </div>
     
     <!-- Detalles del producto -->
     <div class="lg:w-1/2 text-left lg:text-left space-y-4 px-4">
-        <h2 class="text-2xl lg:text-3xl font-bold text-verde leading-tight">Colágeno Hidrolizado con Citrato de Magnesio</h2>
+        <h2 class="text-2xl lg:text-3xl font-bold text- leading-tight">
+            <h2 class="text-shadow text-2xl md:text-3xl text-center text-lila font-medium">Colágeno Hidrolizado con Citrato de Magnesio</h2>
             <p class="text-gray-600 leading-tight font-light">
             Fortalece tus articulaciones, rejuvenece tu piel y estimula el crecimiento de cabello y uñas saludables. Mejora tu digestión, apoya tu corazón y disfruta de un descanso profundo y reparador. Menos ansiedad, más energía y vitalidad: ¡siéntete increíble de adentro hacia afuera!
             </p>
@@ -94,20 +113,19 @@ wp-link-lo-quiero: https://wa.me/573332653017?text=¡Hola, *Vital Energy*! Estoy
             <li>Un tarro contiene 180 g y suele durar aproximadamente 45 días.</li>
             <li>Fácil de mezclar en bebidas</li>
           </ul>
-      <button class="mt-4 px-5 py-3 bg-azul text-white font-semibold rounded-lg hover:bg-lila transition-colors">
+      <button class="text-shadow mt-4 px-6 py-4 bg-verde text-white font-semibold rounded-lg hover:bg-lila transition-colors">
         <a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }}.%20Mi%20nombre%20es%20...">
-        Comprar Ahora
+        Comprar ahora
          </a>
       </button>
     </div>
-  
   </div>
 </section>
 
 <!-- Testimonios --src="/assets/images/testimonio-wp-1.jpg-->
 
 <section class="container testimonial-section">
-  <h2 class="testimonial-title text-center text-verde font-bold mb-6">Lo que nuestros clientes dicen</h2>
+  <h2 class="testimonial-title text-shadow text-center text-verde text-3xl font-semibold mb-6">Lo que nuestros clientes dicen</h2>
   <div class="swiper testimonial-swiper">
     <div class="swiper-wrapper">
       <!-- Slide 1 -->
@@ -122,7 +140,10 @@ wp-link-lo-quiero: https://wa.me/573332653017?text=¡Hola, *Vital Energy*! Estoy
       <div class="swiper-slide">
         <img src="/assets/images/testimonio-wp-1.jpg" alt="Testimonio 3" class="testimonial-image">
       </div>
-      <!-- Agrega más slides según sea necesario -->
+      <!-- Slide 4 -->
+      <div class="swiper-slide">
+        <img src="/assets/images/testimonio-wp-2.jpg" alt="Testimonio 4" class="testimonial-image">
+      </div>
     </div>
     <!-- Controles de navegación -->
     <div class="swiper-button-next text-verde"></div>
@@ -144,7 +165,7 @@ wp-link-lo-quiero: https://wa.me/573332653017?text=¡Hola, *Vital Energy*! Estoy
     >
     
     <div class="text-gray-200 flex flex-col justify-center mx-4 p-2 lg:w-1/2">
-      <h3 class="text-3xl font-semibold mb-4 text-center lg:text-left">Prepáralo en menos de un minuto</h3>
+      <h3 class="text-shadow text-3xl font-semibold mb-4 text-center lg:text-left">Prepáralo en menos de un minuto</h3>
       
       <ol class="list-decimal list-inside space-y-2 text-gris">
         <li>Disuelve 1 cucharadita dosificadora en agua o en la bebida de tu preferencia.</li>
@@ -170,9 +191,9 @@ wp-link-lo-quiero: https://wa.me/573332653017?text=¡Hola, *Vital Energy*! Estoy
 
 
 <!--FAQs Accordion-->
-<section class="container max-w-screen-xl mx-auto px-5 bg-white ">
+<section class="container py-4 mx-auto px-5 bg-plata ">
 	<div class="flex flex-col items-center">
-		<h2 class="font-bold text-5xl mt-5 tracking-tight">
+		<h2 class="text-shadow font-bold text-5xl mt-5 tracking-tight">
 			FAQs
 		</h2>
 		<p class="text-neutral-500 text-xl mt-3">
@@ -221,26 +242,26 @@ wp-link-lo-quiero: https://wa.me/573332653017?text=¡Hola, *Vital Energy*! Estoy
 <!-- Offers Section -->
 <section id="offers" class="container py-16 bg-white">
     <div class="mx-auto px-5">
-      <h2 class="font-bold text-5xl my-5 tracking-tight text-center">Ofertas Especiales</h2>
+      <h2 class="text-shadow font-bold text-5xl my-5 tracking-tight text-center">Ofertas Especiales</h2>
       <div class="grid gap-3 grid-cols-2 lg:grid-cols-4">
         <div class="bg-plata p-6 rounded-lg shadow-lg">
           <h4 class="text-gray-600 text-center">Paga 3 y lleva 5 + obsequio</h4>
-          <p class="text-xl font-semibold mb-2 text-center">$231.000</p>
+          <p class="text-shadow text-xl font-semibold mb-2 text-center">$231.000</p>
           <a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }}.%20Mi%20nombre%20es%20..."><img class="rounded-lg" src="..\assets\images\oferta-3x5.png" alt="{{ page.title }} Oferta 3x5"></a>
         </div>
         <div class="bg-plata p-6 rounded-lg shadow-lg">
           <h4 class="text-gray-600 text-center">Paga 2 y lleva 3 + obsequio</h4>
-          <p class="text-2xl font-semibold mb-2 text-center">$154.000</p>
+          <p class="text-shadow text-2xl font-semibold mb-2 text-center">$154.000</p>
           <a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }}.%20Mi%20nombre%20es%20..."><img class="rounded-lg" src="..\assets\images\oferta-2x3.png" alt="{{ page.title }} Oferta 2x3"></a>
         </div>
         <div class="bg-plata p-6 rounded-lg shadow-lg">
           <h4 class="text-gray-600 text-center">Lleva 2 unidades + obsequio </h4>
-          <p class="text-2xl font-semibold mb-2 text-center">$115.000</p>
+          <p class="text-shadow text-2xl font-semibold mb-2 text-center">$115.000</p>
           <a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }}.%20Mi%20nombre%20es%20..."><img class="rounded-lg" src="..\assets\images\oferta-2.png" alt="{{ page.title }} Oferta 2"></a>
         </div>
         <div class="bg-plata p-6 rounded-lg shadow-lg">
           <h4 class="text-gray-600 text-center">Lleva 1 por</h4>
-          <p class="text-xl font-semibold mb-2 text-center">$77.000</p>
+          <p class="text-shadow text-xl font-semibold mb-2 text-center">$77.000</p>
           <a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }}.%20Mi%20nombre%20es%20..."><img class="rounded-lg" src="..\assets\images\oferta-1.png" alt="{{ page.title }} Oferta 1"></a>
         </div>
       </div>
@@ -252,16 +273,18 @@ wp-link-lo-quiero: https://wa.me/573332653017?text=¡Hola, *Vital Energy*! Estoy
   </div>
 
   <!-- WP Buttom -->
-  <div class="max-w-screen-xl mx-auto px-5 bg-white min-h-screen">
-    <a target="_blank" href="{{ page.wp-link-dudas }}{{ page.title }}.%20Mi%20nombre%20es%20..." class="flex w-70 gap-4 px-4 py-2 bg-[rgb(32,176,85)] rounded-lg shadow-xl self-center items-center justify-around hover:bg-[rgb(34,192,92)]/90" 
-    href=""><img alt="logo whatsapp" loading="lazy" width="70" height="70" decoding="async" data-nimg="1" src="..\assets\images\whatsapp-3d.png" style="color: transparent;"><p class="text-center content-center text-2xl text-white">
-        ¿Aún tienes dudas? ¡Escríbenos!
-    </p></a>
-</div>
+  <section class="container py-16">
+      <div class="mx-auto px-5">
+        <a target="_blank" href="{{ page.wp-link-dudas }}{{ page.title }}.%20Mi%20nombre%20es%20..." class="flex w-70 gap-4 px-4 py-2 bg-[rgb(32,176,85)] rounded-lg shadow-xl self-center items-center justify-around hover:bg-[rgb(34,192,92)]/90" 
+        href=""><p class="text-shadow text-center content-center text-2xl text-white">
+            ¿Aún tienes dudas? ¡Escríbenos!
+        </p><img alt="logo whatsapp" loading="lazy" width="90" height="90" decoding="async" data-nimg="1" src="..\assets\images\whatsapp-3d.png"></a>
+      </div>
+  </section>
 
   <!-- Footer -->
-  <footer class="bg-gris text-white py-4">
-    <div class="container w-full mx-auto text-center">
+  <footer class="w-full mx-auto bg-blue-500 text-white py-4">
+    <div class="text-center">
       <p>&copy; {{ site.title }} 2024. Todos los derechos reservados.</p><sub><a href="https://www.freepik.es/foto-gratis/vista-frontal-mujer-mayor-practicando-yoga-playa_10296196.htm#fromView=image_search_similar&page=1&position=15&uuid=a23409c5-09c6-45c2-ae14-e3c180303052">Imágenes de freepik</a></sub>
     </div>
   </footer>

@@ -4,7 +4,7 @@ body {
   font-family: 'Karla', 'Oswald', 'Nunito', sans-serif;
   background-color: #b0b0b0; /*var(--gris)*/
   background-size: cover;
-  color: #f2f5ff; /*var(--plata);*/
+  /*color: #f2f5ff; /*var(--plata);*/
   height: 100vh;
   /*display: grid;*/
   place-items: center;
