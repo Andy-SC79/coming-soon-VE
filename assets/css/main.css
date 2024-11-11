@@ -1,14 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+@import '/assets/css/output.css';
+@import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
+:root {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --font-sans: "Rubik", sans-serif;
+  --font-serif: "Cardo", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
 
 body {
+  display: block;
   font-family: 'Karla', 'Oswald', 'Nunito', sans-serif;
-  background-color: #b0b0b0; /*var(--gris)*/
   background-size: cover;
-  /*color: #f2f5ff; /*var(--plata);*/
   height: 100vh;
-  /*display: grid;*/
   place-items: center;
   }
+
   /*# sourceMappingURL=bd-coming-soon.css.map */
 .rotating-banner {
   position: relative; /* Fijado en la parte superior de la pantalla */
@@ -70,11 +85,8 @@ li::before {
   left: 0;
 }
 
-/* Vanilla CSS for flip card 
-.card { perspective: 800px;}
-.card__content {transform-style: preserve-3d;}
-.card:hover .card__content {transform: rotateY(.5turn);}
-
-.card__front,
-.card__back { backface-visibility: hidden;}
-.card__back{ transform: rotateY(.5turn);}*/
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+}

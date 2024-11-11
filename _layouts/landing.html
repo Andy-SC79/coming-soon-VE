@@ -37,25 +37,46 @@
       }
     }
   </script>
+  <script>
+  ...
+  extend: {
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 100 },
+        },
+      },
+      animation: {
+        fadeIn: "fadeIn 0.2s ease-in-out forwards",
+      },
+    },
+    ...
+</script>
   <!-- Google Tag Manager -->
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YG0W14CJ6C"></script>
+<!--script async src="https://www.googletagmanager.com/gtag/js?id=G-YG0W14CJ6C"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-YG0W14CJ6C');
-</script>
+</script-->
   </head>
 
-  <body>
+  <body class="bg-plata text-azul pt-2">
+    <!-- Google Tag Manager (noscript) -->
+        <!--noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-YG0W14CJ6C"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript-->
+        <!-- End Google Tag Manager (noscript) -->
+
+    {% include templates/top-banner.html %}
 
     {{ content }}
-	
-    </div><!-- /main container -->
-    <!--div class="clearfix no-gutter"></div-->
+
+    {% include templates/wp-button.html %}
+    {% include templates/footer.html %}
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
