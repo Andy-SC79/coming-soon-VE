@@ -18,68 +18,35 @@
     <link href="../assets/css/output.css" rel="stylesheet">
     <link href="../assets/css/main.css" rel="stylesheet">
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            azul: '#76bcf5',
-            verde: '#69d6cc',
-            lila: '#ad28ff',
-            rosa: '#f729a6',
-            rosado: '#f298a6',
-            gris: '#b0b0b0',
-            oro: '#f8f2e7',/*#FFFFE0',/*#fefcad',/*'#f7f4a2',/*'#fdfd96',*/
-            plata: '#f2f5ff',
-          }
-        }
-      }
-    }
-  </script>
-  <script>
-  ...
-  extend: {
-      keyframes: {
-        fadeIn: {
-          "0%": { opacity: 0 },
-          "100%": { opacity: 100 },
-        },
-      },
-      animation: {
-        fadeIn: "fadeIn 0.2s ease-in-out forwards",
-      },
-    },
-    ...
-</script>
-  <!-- Google Tag Manager -->
-
   <!-- Google tag (gtag.js) -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-YG0W14CJ6C"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YG0W14CJ6C"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-YG0W14CJ6C');
-</script> -->
+</script>
   </head>
 
-  <body class="bg-plata text-azul pt-2">
+  <body class="bg-plata pt-2">
     <!-- Google Tag Manager (noscript) -->
-        <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-YG0W14CJ6C"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-YG0W14CJ6C"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
 
     {% include templates/top-banner.html %}
 
     {{ content }}
 
+    <br><br>
+
     {% include templates/wp-button.html %}
+    <br>
     {% include templates/footer.html %}
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script> -->
 
 <!-- Swiper slider -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -146,6 +113,12 @@
     spaceBetween: 10,
     // Ajustar otras opciones según tus necesidades
 });
+      document.addEventListener("DOMContentLoaded", function() {
+    const slider = document.querySelector('.slider');
+    const clones = slider.cloneNode(true);
+    slider.appendChild(clones);
+    slider.style.width = "200%"; // Ajustar según el número de clonaciones
+});
     </script>
 
 <!-- Cards animation -->
@@ -165,14 +138,21 @@
           cards[currentIndex].classList.add("active");
 
           // Mover el slider
+          // const offset = -currentIndex * 320; // Ancho de la card más el gap
+          // document.querySelector(".slider").style.transform = translateX(${offset}px);
+
           const offset = -currentIndex * 320; // Ancho de la card más el gap
-          document.querySelector(".slider").style.transform = translateX(${offset}px);
+          document.querySelector(".slider").style.transform = `translateX(${offset}px)`;
+
       }
 
       // Iniciar el slider en loop
       setInterval(nextSlide, 2000); // Cambia cada 2 segundos
     });
     </script>
+
+    <script src="/assets/flowbite/flowbite.min.js"></script>
+
 
   </body>
 </html>

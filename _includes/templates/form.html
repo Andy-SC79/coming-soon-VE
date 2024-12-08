@@ -1,195 +1,323 @@
-<!-- Form -->
-  <div class="min-h-screen bg-gray-100 p-0 sm:p-12">
-    <div class="mx-auto max-w-md px-6 py-12 bg-white border-0 shadow-lg sm:rounded-3xl">
-      <h1 class="text-2xl font-bold mb-2">Datos de Envío</h1>
-      <h2 class="text-lead text-gris text-bold text-sm mb-8">Colágeno Hidrolizado con Citrato de Magnesio, Extractos Mágicos x 180gr.</h2>
-      <form id="form" novalidate action="/submit" method="post">
+<div class="min-h-screen w-1/2">
+    <div class="px-6 py-12 bg-white border-0 shadow-lg sm:rounded-3xl rounded-lg">
+      <h1 class="text-2xl text-azul font-bold m-2">Datos de Envío</h1>
+      <!-- <p class="text-gris text-3x1 mb-8">Colágeno Hidrolizado con Citrato de Magnesio, Extractos Mágicos x 180gr.</p> -->
+
+      <!--ID de implementación: AKfycbxPrTUP-jqdec6vZO7dE8vLOhjPfpdHpyjN8P22lNuayN5qEmSSkjtUgSMTwP-02l07 
+        Biblioteca: https://script.google.com/macros/library/d/1Cj0MophVv6MrhuuSZTr9Dkk8a2iDArwM-IsjhKmc_3-p5Tv3QwmIlP6U/1-->
+      <!-- <form class="max-w-md mx-auto" id="form" novalidate action="https://script.google.com/macros/s/AKfycbxPrTUP-jqdec6vZO7dE8vLOhjPfpdHpyjN8P22lNuayN5qEmSSkjtUgSMTwP-02l07/exec" method="post"> -->
+      <form class="max-w-md mx-auto" id="form" novalidate action="https://script.google.com/macros/s/AKfycbyBeqTJbjUA7Hxbc0QdzZRigmKUpYLbYhijNSfTlQ0/dev" method="post">
+        <div class="mb-5 flex">
+
+          <!-- <label for="nombres" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombres: <sup class="text-azul">*</sup></label> -->
+          <input type="text" name="nombres" class="border border-gray-300 text-gray-900 text-sm block w-1/2 p-2.5" placeholder="Nombres" required class="input-field" />
+        
+          <!-- <label for="apellidos" class="block mb-2 text-sm font-medium text-gray-900">Apellidos: <sup class="text-azul">*</sup></label> -->
+          <input type="text" name="apellidos" placeholder="Apellidos" required class="input-field w-1/2" />
+        </div>
+
+        <div class="mb-5 w-full flex">
+          <!-- <label for="phone_number" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white absolute duration-300 top-3 left-20 origin-0">WhatsApp: <sup class="text-azul">*</sup></label> -->
+          <select id="countryCode" name="indicativoPais" class="input-field w-1/4">
+            <option value="+57" selected>🇨🇴 +57</option>
+            <option value="+58">🇻🇪 +58</option>
+            <option value="+593">🇪🇨 +593</option>
+            <option value="+52">🇲🇽 +52</option>
+            <option value="+1">🇺🇸 +1</option>
+            <option value="+56">🇨🇱 +56</option>
+            <option value="+51">🇵🇪 +51</option>
+            <option value="+54">🇦🇷 +54</option>
+            <option value="+55">🇧🇷 +55</option>
+          </select>
+
+          <input type="text" name="whatsApp" inputmode="numeric" pattern="[0-9]*" placeholder="WhatsApp" class="input-field w-full" maxlength="20" required />
+      </div>
+
         <div class="relative z-0 w-full mb-5">
+          <!-- <label for="number" class="absolute duration-300 top-3 -z-1 origin-0 block mb-2 text-sm font-medium text-gray-900 dark:text-white">Número alternativo de contacto: <sup class="text-azul"></sup></label> -->
           <input
-            type="text"
-            name="name"
-            placeholder=" "
-            required
-            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+            type=""
+            name="numeroAlternativo"
+            placeholder="Número alternativo de contacto"
+            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
           />
-          <label for="name" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Nombres y apellidos completos<sup  class=text-azul>*</sup></label>
-          <span class="text-sm text-red-600 hidden" id="error">Este campo es obligatorio</span>
+        </div>
+  
+        <!-- Dropdown de Departamentos-->
+        <div class="relative z-0 w-full mb-5 flex">
+          <!-- <label for="departamento" class="absolute duration-300 top-3 origin-0 block mb-2 text-sm font-medium text-gray-900 dark:text-white">Departamento: </label> -->
+          <select id="departamento" name="departamento" required class="input-field z-10 bg-gray-500 border border-gray-300 text-gray-300 text-sm focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5">
+            <option value="" disabled selected class="text-gris">Departamento</option>
+            {% for departamento in site.data.departamentos %}
+              <option value="{{ departamento.nombre }}">{{ departamento.nombre }}</option>
+            {% endfor %}
+          </select>
+
+        <!-- Dropdown de Ciudades-->
+          <!-- <label for="ciudad" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Ciudad: </label> -->
+          <select id="ciudad" name="ciudad" required class="input-field z-10 bg-gray-500 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5">
+            <option value="" disabled selected>Ciudad</option>
+          </select>
         </div>
 
         <div class="relative z-0 w-full mb-5">
-          <input
-            type="text"
-            name="phone_number"
-            placeholder=" "
-            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
-          />
-          <label for="number" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Número telefónico de WhatsApp<sup class="text-azul">*</sup></label>
+          <label for="direccion" class="absolute duration-300 top-3 -z-1 origin-0 block mb-2 text-sm font-medium text-gray-900 dark:text-white">Dirección de envío:<sup class="text-azul">*</sup></label>
           <span class="text-sm text-red-600 hidden" id="error">Este campo es obligatorio</span>
+          <input
+            type="address"
+            name="direccion"
+            placeholder="Ingrese una dirección completa y valida"
+            class="pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+            required
+            />
         </div>
-  
+
+
+        <!-- <label class="inline-flex items-center cursor-pointer">
+          <input type="checkbox" value="" class="sr-only peer">
+          <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+          <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Toggle me</span>
+        </label> -->
+        <div>
+          <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Notas para el proveedor o la transportadora</label>
+          <input type="text" id="small-input" name="notas" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+      </div>
+
+        <!-- email -->
         <div class="relative z-0 w-full mb-5">
           <input
             type="email"
+            id="email"
             name="email"
-            placeholder=" "
-            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+            placeholder="Correo electrónico"
+            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-500"
+            required
           />
-          <label for="email" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Correo electrónico válido<sup class=text-azul>*</sup></label>
-          <span class="text-sm text-red-600 hidden" id="error">Este campo es obligatorio</span>
         </div>
+        <p id="errorEmail" class="text-lila text-sm mt-1 hidden">Por favor, ingresa un correo válido.</p>
 
-        <div class="relative z-0 w-full mb-5">
-          <input
-            type="address"
-            name="dirección"
-            placeholder=" "
-            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
-          />
-          <label for="email" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Dirección de envío<sup class="text-azul">*</sup></label>
-          <span class="text-sm text-red-600 hidden" id="error">Este campo es obligatorio</span>
-        </div>
-
-        <div class="relative z-0 w-full mb-5">
-          <input
-            type="text"
-            name="ciudad"
-            placeholder=" "
-            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
-          />
-          <label for="email" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Ciudad y Departamento<sup class=text-azul>*</sup></label>
-          <span class="text-sm text-red-600 hidden" id="error">Este campo es obligatorio</span>
-        </div>
-  
-        <!--div class="relative z-0 w-full mb-5">
-          <input
-            type="password"
-            name="password"
-            placeholder=" "
-            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
-          />
-          <label for="password" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Enter password</label>
-          <span class="text-sm text-red-600 hidden" id="error">Password is required</span>
-        </div-->
   
         <fieldset class="relative z-0 w-full p-px mb-5">
-          <legend class="absolute text-gray-500 transform scale-75 -top-3 origin-0">Selecciona tu oferta</legend>
+          <legend class="absolute text-gray-500 transform scale-75 -top-3 origin-0">Método de pago</legend>
           <div class="block pt-3 pb-2 space-x-4">
             <label>
               <input
                 type="radio"
-                name="radio"
-                value="77000"
+                name="metodoPago"
                 class="mr-2 text-black border-2 border-gray-300 focus:border-gray-300 focus:ring-black"
+                value="Tarjeta"
               />
               Pago Con Tarjeta
             </label>
             <label>
               <input
                 type="radio"
-                name="radio"
-                value="115000"
+                name="metodoPago"
                 class="mr-2 text-black border-2 border-gray-300 focus:border-gray-300 focus:ring-black"
-              />
+                checked="checked"
+                value="Contraentrega"
+            />
               Pago Contraentrega
             </label>
           </div>
-          <span class="text-sm text-red-600 hidden" id="error">Option has to be selected</span>
         </fieldset>
-  
+
+        <input
+        id="producto"
+        type="text"
+        name="producto"
+        value="Colágeno con Magnesio"
+        class="hidden"
+        required
+        />
+
         <div class="relative z-0 w-full mb-5">
           <select
-            name="select"
-            value=""
+            id="ofertaSelect"
+            name="oferta"
+            value="0"
             onclick="this.setAttribute('value', this.value);"
             class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none z-1 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+            onchange="actualizarTotal()"
+            required
           >
-            <option value="" selected disabled hidden></option>
+            <option value="" selected disabled>Selecciona una oferta</option>
             <option value="77000">1 und x $77.000</option>
             <option value="115000">2 und x $115.000</option>
             <option value="154000">3 und x $154.000</option>
-            <option value="195000">4 und x $195.000</option>
+            <!-- <option value="195000">4 und x $195.000</option> -->
             <option value="231000">5 und x $231.000</option>
           </select>
-          <label for="select" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Selecciona una oferta</label>
-          <span class="text-sm text-red-600 hidden" id="error">Debes seleccionar una opción</span>
-        </div>
-  
-        <div class="flex flex-row space-x-4 hidden">
-          <div class="relative z-0 w-full mb-5">
-            <input
-              type="hidden"
-              name="dataField"
-              id="dateField"
-              placeholder=" "
-              onclick="this.setAttribute('type', 'date');"
-              class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
-            />
-            <label for="date" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500 hidden">Fecha</label>
-            <span class="text-sm text-red-600 hidden" id="error">Date is required</span>
-          </div>
-          <div class="relative z-0 w-full">
-            <input
-              type="text"
-              name="time"
-              placeholder="{{% today %}} "
-              onclick="this.setAttribute('type', 'time');"
-              class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
-            />
-            <label for="time" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500 hidden">Time</label>
-            <span class="text-sm text-red-600 hidden" id="error">Time is required</span>
-          </div>
-        </div>
-  
-        <div class="relative z-0 w-full mb-5">
-          <input
-            type="number"
-            name="money"
-            placeholder=" "
-            class="pt-3 pb-2 pl-5 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
-          />
-          <div class="absolute top-0 left-0 mt-3 ml-1 text-gray-400">Total a Pagar $</div>
-          <label for="money" class="absolute duration-300 top-3 left-5 -z-1 origin-0 text-gray-500"> </label>
-          <span class="text-sm text-red-600 hidden" id="error">Error</span>
-        </div>
-  
-        <div class="relative z-0 w-full mb-5 hidden">
-          <input
-            type="text"
-            name="duration"
-            placeholder=" "
-            class="pt-3 pb-2 pr-12 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
-          />
-          <div class="absolute top-0 right-0 mt-3 mr-4 text-gray-400">min</div>
-          <label for="duration" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Duration</label>
-          <span class="text-sm text-red-600 hidden" id="error">Duration is required</span>
-        </div>
-  
+        </div>        
+
+        <p id="totalPagar" class="text-azul font-bold mb-4">Total a Pagar: $0</p>
+
+        <input
+        id="valorAPagar"
+        type="number"
+        name="valorAPagar"
+        value=""
+        class="hidden"
+        required
+        />
+          
         <button
           id="button"
           type="submit"
-          class="w-full px-6 py-3 mt-3 text-lg text-white bg-azul rounded hover:bg-verde transition-all duration-150 ease-linear rounded-lg shadow outline-none bg-blue hover:via-violet hover:shadow-lg focus:outline-none"
+          class="w-full px-6 py-3 mt-3 mb-4 text-lg text-white bg-azul rounded hover:bg-verde transition-all duration-150 ease-linear rounded-lg shadow outline-none bg-blue hover:via-violet hover:shadow-lg focus:outline-none"
         >
           Confirmar Pedido
         </button>
       </form>
-    </div>
+      </div>
   </div>
 
-  <script>
+
+
+<!--   <script>
   document.addEventListener("DOMContentLoaded", function() {
   // Select the form
-  const form = document.getElementById("myForm");
+  const form = document.getElementById("form");
   
-  // Listen for form submission
-  form.addEventListener("submit", function() {
-    // Get current date
-    const now = new Date();
-    
-    // Format the date as yyyy-mm-dd (ISO format)
-    const formattedDate = now.toISOString().split("T")[0];
-    
-    // Set the value of the dateField
-    document.getElementById("dateField").value = formattedDate;
+    // Listen for form submission
+    form.addEventListener("submit", function() {
+      // Get current date
+      const now = new Date();
+      
+      // Format the date as yyyy-mm-dd (ISO format)
+      const formattedDate = now.toISOString().split("T")[0];
+      
+      // Set the value of the dateField
+      document.getElementById("dateField").value = formattedDate;
+    });
   });
+  </script> -->
+
+<!-- asigna el valor a pagar segun la oferta seleccionada -->
+<script>
+  function actualizarTotal() {
+    // Obtiene el elemento ofertaSelect
+    const select = document.getElementById('ofertaSelect');
+    // Obtiene el valor seleccionado
+    const valorSeleccionado = select.value;
+    // Actualiza el texto del total a pagar
+    const totalPagarElement = document.getElementById('totalPagar');
+    totalPagarElement.textContent = `Total a Pagar: $${valorSeleccionado || 0}`;
+    const valorAPagar = document.getElementById('valorAPagar');
+    valorAPagar.value = valorSeleccionado;
+  }
+
+document.querySelector('input[name="whatsApp"]').addEventListener('input', function() {
+    this.value = this.value.replace(/\D/g, '').substring(0, 10);
 });
-  </script>
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const departamentos = {{ site.data.departamentos | jsonify }};
+    const departamentoSelect = document.getElementById('departamento');
+    const ciudadSelect = document.getElementById('ciudad');
+
+    function updateCiudades() {
+      const selectedDepartamento = departamentoSelect.value;
+      const selectedData = departamentos.find(dep => dep.nombre === selectedDepartamento);
+
+      if (selectedData) {
+        ciudadSelect.innerHTML = '';
+        selectedData.ciudades.forEach(ciudad => {
+          const option = document.createElement('option');
+          option.value = ciudad.nombre;
+          option.textContent = ciudad.nombre;
+          ciudadSelect.appendChild(option);
+        });
+      }
+    }
+
+    // Inicializar ciudades basadas en el primer valor por defecto del dropdown de departamentos.
+    updateCiudades();
+
+    // Agregar evento de cambio para actualizar ciudades basadas en selección del usuario.
+    departamentoSelect.addEventListener('change', updateCiudades);
+  });
+</script>
+
+<!-- validacion correo -->
+
+<script>
+  document.getElementById('email').addEventListener('blur', validarCorreo);
+
+  function validarCorreo() {
+    const emailInput = document.getElementById('email');
+    const errorEmail = document.getElementById('errorEmail');
+    const email = emailInput.value.trim();
+
+    // Expresión regular para validar el formato del correo electrónico
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+      errorEmail.textContent = 'Por favor, ingresa un correo válido.';
+      errorEmail.classList.remove('hidden'); // Muestra el mensaje de error
+      emailInput.classList.add('border-lila'); // Opcional: resalta el borde en lila
+      emailInput.classList.remove('border-gris'); // Remueve el borde original
+    } else {
+      errorEmail.classList.add('hidden'); // Oculta el mensaje de error si es válido
+      emailInput.classList.remove('border-lila'); // Quita el borde lila
+      emailInput.classList.add('border-gris'); // Restaura el borde original
+    }
+  }
+</script>
+
+<script>
+// Get modal elements
+var formModal = document.getElementById('formModal');
+var confirmationModal = document.getElementById('confirmationModal');
+
+// Get the button that opens the form modal
+var btn = document.getElementById('openModalBtn');
+
+// Get the <span> element that closes the modal
+var spans = document.getElementsByClassName('close');
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+    formModal.style.display = 'block';
+}
+
+// When the user clicks on <span> (x), close the modal
+for (let span of spans) {
+    span.onclick = function() {
+        formModal.style.display = 'none';
+        confirmationModal.style.display = 'none';
+    }
+}
+
+// Handle form submission
+document.getElementById('orderForm').onsubmit = function(event) {
+    event.preventDefault(); // Prevent default submission
+    formModal.style.display = 'none';
+    confirmationModal.style.display = 'block';
+}
+</script>
+
+<script>
+  // Valida todos los campos requeridos antes de enviar formulario
+  document.getElementById('form').addEventListener('submit', function(event) {
+    // Verifica campos vacíos
+    const requiredFields = document.querySelectorAll('input[required], select[required]');
+    let allValid = true;
+    requiredFields.forEach(function(field) {
+      if (!field.value) {
+        allValid = false;
+        // Puedes agregar aquí lógica para mostrar un mensaje de error
+        field.classList.add('border-red-500'); // Resaltar campo vacío
+      } else {
+        field.classList.remove('border-red-500');
+      }
+    });
+
+    if (!allValid) {
+      alert('Por favor complete todos los campos requeridos correctamente.');
+      event.preventDefault(); // Prevenir envío si hay campos incompletos
+    }
+  });
+</script>

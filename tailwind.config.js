@@ -3,13 +3,14 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  content: ["./landings/**/*.html", "./assets/**/*.js"],
+  content: [
+    "./landings/**/*.{html,js}", 
+    "./assets/**/*.js", 
+    "./node_modules/flowbite/**/*.js"
+  ],
   theme: {
     extend: {
       colors:{
-        green: '#d0fdd7',
-        violet: '#EEDDF5',
-        blue: '#DCEAF5',
         azul: '#76bcf5',
         verde: '#69d6cc',
         lila: '#ad28ff',
@@ -22,6 +23,8 @@ module.exports = {
     },
   },
   plugins: [
+    require('@tailwindcss/forms'),
+    require('flowbite/plugin'),
     function ({ addBase, theme }) {
       addBase({
         ':root': {

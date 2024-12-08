@@ -19,6 +19,11 @@
     
   }
 
+@keyframes slide-animation {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
 
 @media (min-width: 800px) {
   .page-content {
@@ -39,14 +44,15 @@
 
 .slider {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 0.5rem;
-    transition: transform 0.5s ease;
+    transition: transform 0.9s ease;
+    animation: slide-animation 50s infinite linear;
 }
 
 .card {
   flex: 1 1 100%;
-  min-width: 1;
+  min-width: 250px;
   max-width: 600px;
   min-height: 350px;
   max-height: 800px;
@@ -99,7 +105,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #3b82f6; /* azul */
+  background-color: var(--azul); /* #3b82f6; /* azul */
   color: white;
   padding: 8px;
   border-bottom-left-radius: 8px;
@@ -136,13 +142,12 @@
   font-family: var(--font-comic-sans);
   font-size: 1.0rem;
   font-style: italic;
-  display: block;
+  display: none;
   font-weight: bold;
-  text-color: white;
+  text-color: var(--azul, #ad28ff);
   line-height: 1.1;
   padding-right: 0.1rem;
   z-index: 1;
-  display: none;
   position: absolute;
   text-align: justify-all;
 }
@@ -158,7 +163,6 @@
   text-transform: uppercase;
   color: white;
   background-color: #69d6cc;
-  border: none;
   border-radius: 10px;
   z-index: 1;
   width: 7rem;
@@ -230,6 +234,12 @@
 
 /*# sourceMappingURL=styles.css.map */
 
+/* cards slider */
+
+.section-spacer { padding: 3em 0; }
+#featured-brands-carousel .owl-item img {filter: grayscale(0); transition: filter .5s; margin: 0 auto; max-width: 150px;}
+#featured-brands-carousel .owl-item a:hover img {filter: grayscale(1);}
+.carousel-side-nav { left: 0px; right: 0px; background: #f9f9f9 none repeat scroll 0 0; border-radius: 50%; color: #999; cursor: pointer; font-size: 16px;  line-height: 25px; text-align: center; transition: all 0.2s ease 0s; width: 25px; height: 25px;  position: absolute; top: 50%; margin: -12.5px 0 0 0; }
 /* Estilos de la sección de testimonios */
 .testimonial-section {
   padding: 2rem 1rem;

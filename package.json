@@ -6,9 +6,11 @@
     "postcss": "^8.4.47",
     "postcss-import": "^16.1.0",
     "sass": "^1.80.4",
-    "tailwindcss": "^3.4.14"
+    "tailwindcss": "^3.4.15"
   },
   "dependencies": {
+    "@tailwindcss/forms": "^0.5.9",
+    "flowbite": "^2.5.2",
     "swiper": "^11.1.14"
   }
 }

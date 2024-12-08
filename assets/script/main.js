@@ -47,5 +47,5 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Iniciar el slider en loop
-  setInterval(nextSlide, 2000); // Cambia cada 2 segundos
+  setInterval(nextSlide, 4000); // Cambia cada 2 segundos
 });

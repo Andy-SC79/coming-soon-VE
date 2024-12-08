@@ -38,9 +38,6 @@ attribution-text: Imágenes de freepik
 <!--Benefits Cards-->
 <section class="container bg-plata">
 
-  <!--p>¡Únete a más 
-                de 5,750 clientes satisfechos!</p>
-            <a href="#form" class="bg-rosado text-plata py-2 px-4 rounded hover:bg-azul transition">Empieza hoy tu transformación</a-->
     <div class="w-full space-x-2">
         <h2 class="text-shadow text-4xl md:text-5xl text-center text-lila font-medium mt-2 pb-8">¿Qué ocurre en mi cuerpo <br><sub>al consumir Extractos Mágicos?<sub></h2>
     </div>
@@ -50,21 +47,29 @@ attribution-text: Imágenes de freepik
     {% endfor %}
 
 
-    <main class="page-content">
-        <div class="slider-container">
-            <div class="slider grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+    <main class="page-content swiper testimonial-swiper">
+        <div class="swiper-wrapper slider-container">
+            <div class="slider flex flex-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                 {% for card in site.data.cards %}
                     <div class="card rounded overflow-hidden bg-cover" style="background-image: url('/assets/images/{{ card.src }}.jpg');">
                       <h2 class="title top-right">{{ card.title }}</h2>
                       <p class="copy text-center text-1x1">{{ card.copy }}</p>
-                      <button class="btn text-shadow"><a target="_blank" href="#checkout">Lo Quiero</a></button>
+                      <button class="btn text-shadow"><a href="#checkout">Lo Quiero</a></button>
                     </div>
                   {% endfor %}
             </div>
         </div>
+        <!-- Controles de navegación -->
+    <div class="swiper-button-next text-verde"></div>
+    <div class="swiper-button-prev text-verde"></div>
+    <!-- Paginación -->
+    <div class="swiper-pagination"></div>
     </main>
 </section>
 <!--/cards-->
+
+<!-- benefits scrolling slider -->
+<!-- /benefits scrolling slider -->
 
 <!-- Detalles -->
 <section class="bg-oro py-10">
@@ -91,7 +96,7 @@ attribution-text: Imágenes de freepik
                 <li>Fácil de preparar. Mézclalo con tu bebida favorita</li>
             </ul>
             <button class="text-shadow mt-4 px-6 py-4 bg-verde text-white font-semibold rounded-lg hover:bg-lila transition-colors">
-                <a target="_blank" href="#checkout">
+                <a href="#checkout">
                 Quiero el mío!
                  </a>
             </button>
@@ -168,7 +173,7 @@ attribution-text: Imágenes de freepik
 
 
 <!--FAQs Accordion-->
-<section class="container py-4 mx-auto px-5 bg-plata ">
+<section class="container text-azul py-4 mx-auto px-5 bg-plata ">
 	<div class="flex flex-col items-center">
 		<h2 class="text-shadow font-bold text-5xl mt-5 tracking-tight">
 			FAQs
@@ -221,17 +226,18 @@ attribution-text: Imágenes de freepik
                 <li>📦 Seguimiento a tu envío y asesoría postventa</li>
             </ul>
             <p class="text-gray-600 leading-tight font-light">No esperes más y aprovecha esta oportunidad por tiempo limitado!</p>
-            <button class="text-shadow mt-4 px-6 py-4 bg-verde text-white font-semibold rounded-lg hover:bg-lila transition-colors">
-                <a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }}.%20Mi%20nombre%20es%20...">
+            <button id="openModalBtn" class="text-shadow mt-4 px-6 py-4 bg-verde text-white font-semibold rounded-lg hover:bg-lila transition-colors">
+                <!-- <a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }}.%20Mi%20nombre%20es%20...">
                 Comprar ahora!
-                 </a>
+                 </a> -->
+                 Comprar ahora!
             </button>
         </div>
     </div>
 </section>
 
  <!-- Offers Section -->
-<section id="offers" class="container py-16 bg-white">
+<section id="offers" class="text-azul container py-16 bg-white">
     <div class="mx-auto px-5">
         <h2 class="text-shadow font-bold text-5xl my-5 tracking-tight text-center">Ofertas Especiales</h2>
         <div class="grid gap-3 grid-cols-2 lg:grid-cols-4">
@@ -260,9 +266,29 @@ attribution-text: Imágenes de freepik
 </section>
 
   <!-- gif unmerco -->
-  <div id="gif-unmerco" class="container text-center px-2">
+  <div id="gif-unmerco" class="container text-center my-1 rounded-lg shadow-lg">
     <img src="http://pruebas.unmerco.com/wp/wp-content/uploads/2023/11/SENTIRSE-JOVEN-2.gif" alt="Mujer rejuvenecida porque toma {{ page.title }}">
   </div>
+
+  <!-- Form Modal -->
+<div id="formModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        {%include templates/form.html %}
+    </div>
+</div>
+
+<!-- Confirmation Modal -->
+<div id="confirmationModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <form class="max-w-sm mx-auto" id="form" novalidate action="/submit" method="post">
+            <div class="mb-5 flex">
+                <p>Your order is in process.</p>
+            </div>
+        </form>
+    </div>
+</div>
 
   
 </body>
