@@ -28,24 +28,45 @@ function toggleMenu() {
 
     //Cards animation
 document.addEventListener("DOMContentLoaded", function () {
-  const cards = document.querySelectorAll(".slider .card");
-  let currentIndex = 0;
+  
 
-  function nextSlide() {
-      // Remover clase activa de la card actual
-      cards[currentIndex].classList.remove("active");
+  const swiper = new Swiper('.testimonial-swiper', {
 
-      // Avanzar al siguiente índice
-      currentIndex = (currentIndex + 1) % cards.length;
+    loop: true,
+    slidesPerView: "auto",
+    spaceBetween: 12,
 
-      // Agregar clase activa a la nueva card
-      cards[currentIndex].classList.add("active");
+    loopAdditionalSlides: 12,
+    loopedSlides: 12,
 
-      // Mover el slider
-      const offset = -currentIndex * 320; // Ancho de la card más el gap
-      document.querySelector(".slider").style.transform = `translateX(${offset}px)`;
-  }
+    freeMode: {
+        enabled: true,
+        momentum: false,
+    },
 
-  // Iniciar el slider en loop
-  setInterval(nextSlide, 4000); // Cambia cada 2 segundos
+    autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    },
+
+    speed: 5000,
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+
+    /*breakpoints: {
+        640: { slidesPerView: 2 },
+        768: { slidesPerView: 3 },
+        1024: { slidesPerView: 4 },
+    }*/
+
+});
 });

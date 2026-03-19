@@ -20,7 +20,7 @@ title: Vital Energy Shop | Coming Soon Page
                         <a class="navbar-brand" href="#">
                             <img class="img-fluid" style="width: 150px; height:150px;" src="assets/images/white-logo.png" alt="Vital Energy Logo">
                         </a>
-                        <span class="navbar-text ml-auto d-none d-sm-inline-block">+57 333 265-3017</span>
+                        <span class="navbar-text ml-auto d-none d-sm-inline-block">+57 302 288-2578</span>
                         <span class="navbar-text d-none d-sm-inline-block"><a href="mailto:shop.vitalenergy@gmail.com">shop.vitalenergy@gmail.com</a></span>
                     </nav>
                 </div>
@@ -34,7 +34,7 @@ title: Vital Energy Shop | Coming Soon Page
                         <p class="lead page-title">Contáctanos</p>
                         <a href="https://www.facebook.com/VitalEnergyShop/" class="social-link"><i class="mdi mdi-facebook-box"></i></a>
                         <a href="https://www.instagram.com/vitalenergy.shop/" class="social-link"><i class="mdi mdi-instagram"></i></a>
-                        <a href="https://wa.me/573332653017?text=Hola!%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20uno%20de%20sus%20productos" class="social-link"><i class="mdi mdi-whatsapp"></i></a>
+                        <a href="https://wa.me/573022882578?text=Hola!%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20uno%20de%20sus%20productos" class="social-link"><i class="mdi mdi-whatsapp"></i></a>
                         <a href="../colageno-magnesio-extractos-magicos" class="social-link"><i class="mdi mdi-egg-easter"></i></a>
                     </nav>
                 </div>

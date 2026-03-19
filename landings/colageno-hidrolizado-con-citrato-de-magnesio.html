@@ -21,7 +21,7 @@ attribution-text: Imágenes de freepik
             </h3>
             <div class="mt-10 flex flex-col sm:flex-row justify-center md:justify-start">
                 
-                <button class="openModalBtn w-full sm:w-40 px-4 py-3 rounded font-semibold text-md bg-azul text-white border-2 border-azul hover:bg-lila hover:border-lila hover:text-white hover:font-bold">Empieza tu transformación</button>
+                <a target="_blank" href="#offers"><button class="w-full sm:w-40 px-4 py-3 rounded font-semibold text-md bg-azul text-white border-2 border-azul hover:bg-lila hover:border-lila hover:text-white hover:font-bold">Empieza tu transformación</button>
                 
                 <a target="_blank" href="{{ page.wp-link-dudas }}{{ page.title }}.%20Mi%20nombre%20es%20..."><button class="w-full mt-4 sm:mt-0 sm:ml-4 sm:w-40 px-4 py-3 rounded font-semibold text-md bg-white text-azul border-2 border-gray-500 hover:bg-verde hover:border-verde hover:text-white hover:font-bold">Chatea con nosotros</button>
                 </a>
@@ -48,21 +48,21 @@ attribution-text: Imágenes de freepik
 
 
     <main class="page-content swiper testimonial-swiper">
-        <div class="swiper-wrapper slider-container">
-            <div class="slider flex flex-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+        <div class="swiper-wrapper">
+            <!--div class="flex flex-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3"-->
                 {% for card in site.data.cards %}
-                    <div class="card rounded overflow-hidden bg-cover" style="background-image: url('/assets/images/{{ card.src }}.jpg');">
-                      <h2 class="title top-right">{{ card.title }}</h2>
-                      <p class="copy text-center text-1x1">{{ card.copy }}</p>
-                      <button class="openModalBtn btn text-shadow">Lo Quiero</button>
+                    <div class="swiper-slide">
+                        <div class="card rounded overflow-hidden bg-cover" style="background-image: url('/assets/images/{{ card.src }}.jpg');">
+                          <h2 class="title top-right">{{ card.title }}</h2>
+                          <p class="copy text-center text-1x1">{{ card.copy }}</p>
+                          <button class="openModalBtn btn text-shadow">Lo Quiero</button>
+                        </div>
                     </div>
                   {% endfor %}
             </div>
         </div>
-        <!-- Controles de navegación -->
     <div class="swiper-button-next text-verde"></div>
     <div class="swiper-button-prev text-verde"></div>
-    <!-- Paginación -->
     <div class="swiper-pagination"></div>
     </main>
 </section>
@@ -242,32 +242,30 @@ attribution-text: Imágenes de freepik
             <div class="bg-plata p-6 rounded-lg shadow-lg">
               <h4 class="text-gray-600 text-center">Paga 3 y lleva 5 + obsequio</h4>
               <p class="text-shadow text-xl font-semibold mb-2 text-center">$231.000</p>
-              <a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }},%20oferta%203x5.%20Mi%20nombre%20es%20..."><img class="rounded-lg" src="..\assets\images\oferta-3x5.png" alt="{{ page.title }} Oferta 3x5"></a>
+              <a target="_blank" class="openModalBtn"><img class="rounded-lg" src="..\assets\images\oferta-3x5.png" alt="{{ page.title }} Oferta 3x5"></a>
             </div>
             <div class="bg-plata p-6 rounded-lg shadow-lg">
               <h4 class="text-gray-600 text-center">Paga 2 y lleva 3 + obsequio</h4>
               <p class="text-shadow text-2xl font-semibold mb-2 text-center">$154.000</p>
-              <a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }},%20oferta%202x3.%20Mi%20nombre%20es%20..."><img class="rounded-lg" src="..\assets\images\oferta-2x3.png" alt="{{ page.title }} Oferta 2x3"></a>
+              <a target="_blank" class="openModalBtn"><img class="rounded-lg" src="..\assets\images\oferta-2x3.png" alt="{{ page.title }} Oferta 2x3"></a>
             </div>
             <div class="bg-plata p-6 rounded-lg shadow-lg">
               <h4 class="text-gray-600 text-center">Lleva 2 unidades + obsequio </h4>
               <p class="text-shadow text-2xl font-semibold mb-2 text-center">$115.000</p>
-              <a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }},%20oferta%202un.%20Mi%20nombre%20es%20..."><img class="rounded-lg" src="..\assets\images\oferta-2.png" alt="{{ page.title }} Oferta 2"></a>
+              <a target="_blank" class="openModalBtn"><img class="rounded-lg" src="..\assets\images\oferta-2.png" alt="{{ page.title }} Oferta 2"></a>
             </div>
             <div class="bg-plata p-6 rounded-lg shadow-lg">
               <h4 class="text-gray-600 text-center">Lleva 1 por</h4>
               <p class="text-shadow text-xl font-semibold mb-2 text-center">$77.000</p>
-              <a target="_blank" href="{{ page.wp-link-lo-quiero }}{{ page.title }},%20oferta%201un.%20Mi%20nombre%20es%20..."><img class="rounded-lg" src="..\assets\images\oferta-1.png" alt="{{ page.title }} Oferta 1"></a>
+              <a target="_blank" class="openModalBtn"><img class="rounded-lg" src="..\assets\images\oferta-1.png" alt="{{ page.title }} Oferta 1"></a>
             </div>
         </div>
     </div>
 </section>
 
-  <!-- gif unmerco -->
-  <!--div id="gif-unmerco" class="container text-center my-1 rounded-lg shadow-lg">
-    <img src="http://pruebas.unmerco.com/wp/wp-content/uploads/2023/11/SENTIRSE-JOVEN-2.gif" alt="Mujer rejuvenecida porque toma {{ page.title }}">
-  </div-->
+<!--<a href="{{ page.wp-link-lo-quiero }}{{ page.title }},%20oferta%202x3.%20Mi%20nombre%20es%20...">-->
 
+ 
   <!-- Form Modal -->
 <div id="formModal" class="modal">
     <div class="modal-content">
