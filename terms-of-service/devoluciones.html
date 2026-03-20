@@ -1,18 +1,17 @@
 ---
 title: Politica de Devoluciones
-layout: landing
+layout: terms
 permalink: politica-de-devoluciones
 ---
 <div class="container text-center bg-verde">
 	<h1 class="text-shadow text-white py-10 text-bold text-xl">{{ site.title}} - {{ page.title }}</h1>
 </div>
 <div class="container mt-16 px-5">
-
+	<div class="mb-6"></div>
 	{% for clause in site.data.return-policy %}
-	<h2 class="font-semibold text-azul text-2x1 mb-2">{{ clause.title }}: </h2>
+	<span class="font-semibold text-x1 text-azul mb-2">{{ clause.title }}: </span>
 	<p class="mb-6 border-bottom font-ligh">{{ clause.description }}</p>
 	{% endfor %}
 
 </div>
 
-{% include templates/footer.html %}

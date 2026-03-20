@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+  <head>
+{% include templates/meta_tags.html %} 
+
+
+    <title>
+    {{ page.title }}
+    </title>
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+    <link src="{{ '/assets/script/main.js' | relative_url }}">
+
+    <!-- Font awesome icons -->
+    <script src="https://kit.fontawesome.com/1dca1a1767.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="../assets/css/styles.css" rel="stylesheet">
+    <link href="../assets/css/output.css" rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YG0W14CJ6C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YG0W14CJ6C');
+</script>
+  </head>
+
+  <body class="bg-plata pt-2">
+    <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-YG0W14CJ6C"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+    {% include templates/top-banner.html %}
+
+    {{ content }}
+
+    <br><br>
+
+    {% include templates/wp-button.html %}
+    <br>
+    {% include templates/footer.html %}
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+  </body>
+</html>

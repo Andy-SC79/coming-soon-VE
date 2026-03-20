@@ -185,6 +185,11 @@
   outline-offset: 3px;
 }
 
+.openModalBtn,
+.openModalBtn img {
+  cursor: pointer;
+}
+
   .content {
   position: relative;
   display: flex;
