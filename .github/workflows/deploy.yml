@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Download code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6.0.2
 
       - name: Deploy a GitHub Pages
         uses: actions/upload-pages-artifact@v4
@@ -19,4 +19,4 @@ jobs:
           path: .
 
       - name: Publish to GitHub Pages
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4.0.5
