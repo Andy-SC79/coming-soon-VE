@@ -1,27 +1,35 @@
-name: Deploy website
+name: Deploy to Cloudflare Pages
 
 on:
   push:
     branches:
       - main
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Download code
-        uses: actions/checkout@v6.0.2
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-      - name: Deploy a GitHub Pages
-        uses: actions/upload-pages-artifact@v4
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          path: .
+          ruby-version: '3.4'
 
-      - name: Publish to GitHub Pages
-        uses: actions/deploy-pages@v4.0.5
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: comin-soon-VE
+          directory: _site
